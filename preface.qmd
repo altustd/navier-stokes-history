@@ -1,0 +1,37 @@
+---
+title: "Preface"
+number-sections: false
+---
+
+# Preface {.unnumbered}
+
+## Why Equations Have Histories {.unnumbered}
+
+Equations, like buildings, have architects. We forget this. We learn the Navier-Stokes equations as a finished object --- a pair of expressions that govern viscous fluid flow, handed down from some impersonal mathematical authority, as permanent and context-free as the multiplication table. The names attached to them are decorative at best, a reminder that some historical figures contributed something we no longer need to think about.
+
+This book argues the opposite. The history of these equations is not a footnote. It is the whole point.
+
+Claude-Louis Navier derived them in 1822 using a model of molecular forces that we now know to be physically wrong. He got the right answer anyway. George Gabriel Stokes re-derived them in 1845 using a correct continuum argument, unaware that Navier, Cauchy, Poisson, and Saint-Venant had all preceded him. Five men, working independently across two countries and two decades, converged on the same equations. No one told them to. The industrial age demanded it.
+
+The equations describe every viscous fluid that has ever flowed: rivers, blood, oil in a bearing, exhaust from a rocket nozzle, the wind over a bridge at the moment it starts to fail. They are among the most practically important expressions in all of science. They are also, in a precise mathematical sense, unfinished. We do not know whether smooth solutions always exist. A million-dollar prize from the Clay Mathematics Institute has been waiting since the year 2000 for anyone who can answer that question, and the answer has not come.
+
+This is the story of how the equations were built, by whom, under what circumstances, and why we still cannot fully explain what they do.
+
+## A Note on Mathematics {.unnumbered}
+
+The Navier-Stokes equations are partial differential equations, which means they describe how quantities change simultaneously in space and in time. To write them down requires the notation of vector calculus --- gradients, divergences, Laplacians. This notation is efficient but, to the uninitiated, opaque.
+
+This book does not require you to operate the mathematics. It asks only that you read it, the way one reads a sentence in a foreign language one barely knows: looking for recognizable shapes, tolerating ambiguity, trusting that the meaning will accumulate. The equations are presented because they should be seen, not because they will be used.
+
+Where computations appear --- velocity profiles, flow transitions, energy spectra --- they are there to make something visible, not to test the reader.
+
+## On Sources {.unnumbered}
+
+The primary historical source for this book is Olivier Darrigol's *Worlds of Flow* (2005), a meticulous scholarly history of fluid mechanics from Euler to the twentieth century. Anderson's *A History of Aerodynamics* (1997) provides essential context for the applied tradition. Stokes's original 1845 paper is readable and rewards attention. Navier's 1823 memoir is less readable, partly because his molecular model requires constant translation, but the derivation reveals a mind working at the edge of what the physics of his era could support.
+
+All errors of interpretation are mine.
+
+---
+
+*Troy Altus*
+*2026*

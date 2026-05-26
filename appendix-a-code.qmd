@@ -1,0 +1,127 @@
+---
+title: "Code Reference"
+number-sections: true
+---
+
+# Code Reference {.unnumbered}
+
+All executable code from the book, collected here for reference. Functions are defined with `eval: false` so they do not re-execute on render.
+
+## Hagen-Poiseuille Profile {.unnumbered}
+
+```{python}
+#| eval: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def poiseuille_profile(R=1.0, n_points=400):
+    """
+    Normalized Hagen-Poiseuille velocity profile.
+    Returns (r, u) where r is radial position [-R, R]
+    and u is normalized velocity u/U_max.
+    """
+    r = np.linspace(-R, R, n_points)
+    u = 1 - (r / R)**2  # parabolic profile
+    return r, u
+
+def poiseuille_flow_rate(delta_p, R, mu, L):
+    """
+    Hagen-Poiseuille volume flow rate.
+    Q = pi * delta_p * R^4 / (8 * mu * L)
+
+    Parameters
+    ----------
+    delta_p : float  Pressure drop [Pa]
+    R       : float  Pipe radius [m]
+    mu      : float  Dynamic viscosity [Pa·s]
+    L       : float  Pipe length [m]
+
+    Returns
+    -------
+    Q : float  Volume flow rate [m^3/s]
+    """
+    return np.pi * delta_p * R**4 / (8 * mu * L)
+```
+
+## Reynolds Number {.unnumbered}
+
+```{python}
+#| eval: false
+
+def reynolds_number(rho, U, L, mu=None, nu=None):
+    """
+    Compute Reynolds number Re = rho * U * L / mu = U * L / nu.
+
+    Provide either mu (dynamic viscosity) or nu (kinematic viscosity).
+
+    Parameters
+    ----------
+    rho : float  Density [kg/m^3]
+    U   : float  Characteristic velocity [m/s]
+    L   : float  Characteristic length [m]
+    mu  : float  Dynamic viscosity [Pa·s], optional
+    nu  : float  Kinematic viscosity [m^2/s], optional
+
+    Returns
+    -------
+    Re : float  Reynolds number [-]
+    """
+    if nu is not None:
+        return U * L / nu
+    elif mu is not None:
+        return rho * U * L / mu
+    else:
+        raise ValueError("Provide either mu or nu")
+
+# Common kinematic viscosities at 20°C [m^2/s]
+NU = {
+    'water': 1.004e-6,
+    'air':   1.516e-5,
+    'honey': 2.0e-3,
+    'blood': 3.0e-6,
+}
+```
+
+## Kolmogorov Scales {.unnumbered}
+
+```{python}
+#| eval: false
+
+def kolmogorov_scales(epsilon, nu):
+    """
+    Kolmogorov microscales for turbulence.
+
+    Parameters
+    ----------
+    epsilon : float  Turbulent energy dissipation rate [m^2/s^3]
+    nu      : float  Kinematic viscosity [m^2/s]
+
+    Returns
+    -------
+    eta : float  Kolmogorov length scale [m]
+    tau : float  Kolmogorov time scale [s]
+    v_k : float  Kolmogorov velocity scale [m/s]
+    """
+    eta = (nu**3 / epsilon)**0.25       # length scale
+    tau = (nu / epsilon)**0.5           # time scale
+    v_k = (nu * epsilon)**0.25          # velocity scale
+    return eta, tau, v_k
+
+def dns_grid_count(Re, exponent=9/4):
+    """
+    Approximate number of grid points needed for Direct Numerical Simulation.
+    Scales as Re^(9/4) in each dimension; total ~ Re^(9/4) in 3D.
+    (More precisely, linear grid points ~ Re^(3/4) per dimension.)
+
+    Parameters
+    ----------
+    Re       : float  Reynolds number
+    exponent : float  Scaling exponent (default 9/4 for total points)
+
+    Returns
+    -------
+    N : float  Approximate total grid point count
+    """
+    return Re**exponent
+```

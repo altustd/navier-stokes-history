@@ -1,0 +1,75 @@
+---
+title: "The World Before Friction"
+number-sections: true
+---
+
+# The World Before Friction
+
+::: {.callout-note icon=false}
+## Learning Objectives
+- Understand what Euler's equations describe and where they fail
+- Recognize viscosity as the missing physical ingredient
+- See why real fluids — pipes, rivers, bearings — diverge from ideal-fluid predictions
+:::
+
+## A Perfect Fluid, Perfectly Wrong
+
+In 1755, Leonhard Euler published the equations that bear his name, and fluid mechanics acquired its first complete mathematical framework. Euler was fifty-two years old, almost entirely blind, and producing mathematics at a rate that would not be equaled until the age of computing. His fluid equations were a triumph of abstraction: three expressions that related velocity, pressure, and density for any flowing substance, derived from Newton's second law applied to a fluid parcel.
+
+They were also, from an engineering standpoint, stubbornly useless.
+
+The Euler equations describe what is called a *perfect fluid* --- a fluid with no internal friction. Every parcel of fluid slides past its neighbor without resistance. No energy is wasted in shearing. The mathematics is clean, and the predictions are precise. They are also consistently, sometimes wildly, wrong.
+
+A pipe carrying water predicted by Euler's equations should carry it faster than it does. A ship moving through water predicted by those equations should encounter less resistance than it does. A ball falling through air should reach the same pressure on its front face as on its back, producing no net drag at all --- a result so plainly at odds with experience that it acquired its own name: d'Alembert's paradox, after Jean le Rond d'Alembert, who derived it in 1752 and recognized immediately that something was missing.
+
+What was missing was friction.
+
+## What Viscosity Is
+
+Every real fluid resists shearing. Run your finger through honey and you feel the resistance directly. The fluid near your finger moves with you; the fluid far away does not; and between them lies a gradient of velocity that the fluid's internal friction tries to smooth out. Water does this less dramatically than honey, air less dramatically than water, but every fluid does it. The property that quantifies this resistance is called *viscosity*, from the Latin *viscum* for mistletoe berries, whose sticky juice was an early practical standard.
+
+Viscosity is a material property, not a flow property. It belongs to the fluid, not to the pipe or the wind or the conditions. Honey at room temperature has a dynamic viscosity roughly ten thousand times greater than water. Air is roughly fifty times less viscous than water. These ratios are not approximations; they are measured facts that engineering depends on daily.
+
+In Euler's equations, viscosity does not appear. There is no term for it, no variable to hold it. A fluid described by those equations is frictionless by construction. This is not an oversight. Euler knew real fluids had viscosity. The equations were an idealization, useful for understanding pressure distributions and wave speeds, not for predicting losses in a pipe.
+
+The task that fell to the nineteenth century was to fix this: to put friction back into the equations of motion, to build a mathematical framework that could be applied to the pumps, pipes, channels, and turbines that the industrial revolution was demanding.
+
+## The Euler Equations
+
+To understand what was eventually added, it helps to know what was already there. For an incompressible fluid --- one whose density $\rho$ does not change --- Euler's equations consist of two parts.
+
+The first is a statement of mass conservation. Whatever fluid enters a region must leave it:
+
+$$\nabla \cdot \mathbf{u} = 0$$ {#eq-continuity}
+
+where $\mathbf{u}$ is the velocity field. This equation says, simply, that fluid cannot be created or destroyed.
+
+The second is a statement of momentum conservation --- Newton's second law for a fluid parcel:
+
+$$\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \rho \mathbf{g}$$ {#eq-euler}
+
+On the left: mass times acceleration, the inertial term. The $\mathbf{u} \cdot \nabla \mathbf{u}$ piece is the convective acceleration --- the change in velocity that occurs because the fluid is moving through a region where the velocity is itself varying. This term is nonlinear, which is why fluid dynamics is hard.
+
+On the right: the pressure gradient, which pushes fluid from high pressure to low, and the body force $\rho \mathbf{g}$, usually gravity.
+
+Equation @eq-euler is structurally correct. The problem is what it omits. There is no term representing internal friction, no place where the fluid's viscosity can enter. Add that term, and you have the Navier-Stokes equations. The story of the next two chapters is the story of how that addition was made --- twice, correctly; and before that, several times incorrectly or incompletely.
+
+## The Industrial Imperative
+
+The reason viscosity could not be ignored indefinitely had little to do with academic curiosity and everything to do with water and steam.
+
+The early nineteenth century was filling itself with machines that moved fluids. Canal networks required accurate prediction of flow rates through channels. Steam engines needed to pump water out of mines. Cities were beginning to install pressurized water distribution systems. Ships were being designed to specifications that required knowing, not guessing, how much resistance the hull would encounter. None of these applications could tolerate a theory that assumed friction away.
+
+Engineers responded the only way available: empirically. They measured. Antoine Chézy in the 1770s developed formulas for channel flow based on careful observation. Henri Darcy in the 1850s ran systematic experiments on pipes and produced the head-loss relationship that still bears his name. The gap between the theoretical ideal fluid and the real viscous world was filled, provisionally, with data.
+
+But data without theory is a catalog, not an understanding. The engineers who followed Euler wanted equations that were right for the right reasons --- that could be derived from first principles, tested against new situations, and trusted outside the range of existing measurements. That ambition pointed toward a single missing term in @eq-euler, and the men who found it are the subjects of the next two chapters.
+
+## Summary
+
+Euler's 1755 equations gave fluid mechanics its first complete mathematical framework, but described an idealized frictionless fluid. Real fluids resist shearing --- a property quantified by viscosity. The gap between Euler's predictions and experimental reality showed up in pipes, ships, and falling bodies, producing paradoxes that could not be explained away. The industrial demands of the nineteenth century made finding the viscous correction not merely academic but urgent. The correction, when it came, would emerge independently from five different men working across two countries and two decades.
+
+## Further Reading
+
+- Darrigol, O. *Worlds of Flow: A History of Hydrodynamics from the Bernoullis to Prandtl*. Oxford University Press, 2005. The definitive scholarly history; Chapter 1 covers the pre-Navier era.
+- Anderson, J.D. *A History of Aerodynamics*. Cambridge University Press, 1997. Places the Euler equations in the context of flight and drag.
+- Euler, L. "Principes généraux du mouvement des fluides." *Mémoires de l'Académie des Sciences de Berlin*, 1755. The original; available online via the Euler Archive.

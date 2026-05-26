@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; A Million Dollars for a Proof – Friction and Flow</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./06-turbulence.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-millennium.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A Million Dollars for a Proof</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Friction and Flow</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/altustd/navier-stokes-history" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The World Before Friction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-navier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Engineer Who Got the Right Answer</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-stokes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Cambridge Mathematician</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-five-derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Five Men, One Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-physics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">What the Equations Actually Say</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-turbulence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Monster Inside the Equations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-millennium.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A Million Dollars for a Proof</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-a-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Code Reference</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#a-million-dollars-for-a-proof" id="toc-a-million-dollars-for-a-proof" class="nav-link active" data-scroll-target="#a-million-dollars-for-a-proof"><span class="header-section-number">9</span> A Million Dollars for a Proof</a>
+  <ul class="collapse">
+  <li><a href="#the-seven-problems" id="toc-the-seven-problems" class="nav-link" data-scroll-target="#the-seven-problems"><span class="header-section-number">9.1</span> The Seven Problems</a></li>
+  <li><a href="#what-the-problem-actually-asks" id="toc-what-the-problem-actually-asks" class="nav-link" data-scroll-target="#what-the-problem-actually-asks"><span class="header-section-number">9.2</span> What the Problem Actually Asks</a></li>
+  <li><a href="#what-blow-up-would-mean" id="toc-what-blow-up-would-mean" class="nav-link" data-scroll-target="#what-blow-up-would-mean"><span class="header-section-number">9.3</span> What Blow-Up Would Mean</a></li>
+  <li><a href="#partial-results" id="toc-partial-results" class="nav-link" data-scroll-target="#partial-results"><span class="header-section-number">9.4</span> Partial Results</a></li>
+  <li><a href="#why-it-matters-beyond-the-prize" id="toc-why-it-matters-beyond-the-prize" class="nav-link" data-scroll-target="#why-it-matters-beyond-the-prize"><span class="header-section-number">9.5</span> Why It Matters Beyond the Prize</a></li>
+  <li><a href="#the-larger-picture" id="toc-the-larger-picture" class="nav-link" data-scroll-target="#the-larger-picture"><span class="header-section-number">9.6</span> The Larger Picture</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">9.7</span> Summary</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">9.8</span> Further Reading</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A Million Dollars for a Proof</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="a-million-dollars-for-a-proof" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> A Million Dollars for a Proof</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Understand what the Clay Millennium Prize Problem for Navier-Stokes actually asks</li>
+<li>Understand the mathematical distinction between existence, uniqueness, and smoothness</li>
+<li>Know the current state of partial results toward a solution</li>
+<li>Appreciate why the answer matters beyond the prize</li>
+</ul>
+</div>
+</div>
+<section id="the-seven-problems" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="the-seven-problems"><span class="header-section-number">9.1</span> The Seven Problems</h2>
+<p>In May 2000, the Clay Mathematics Institute of Cambridge, Massachusetts, announced the Millennium Prize Problems: seven mathematical questions, each carrying a prize of one million dollars for a correct solution. The problems were chosen by a committee of leading mathematicians to represent the most important unsolved questions in the field.</p>
+<p>The list was: - The Riemann Hypothesis - The P versus NP Problem - The Hodge Conjecture - The Yang-Mills Existence and Mass Gap - The Birch and Swinnerton-Dyer Conjecture - The Navier-Stokes Existence and Smoothness Problem - The Poincaré Conjecture</p>
+<p>By 2025, one problem has been solved. In 2003, the Russian mathematician Grigori Perelman proved the Poincaré Conjecture, completing a program developed by Richard Hamilton over many years. Perelman declined both the Clay Prize and the Fields Medal, the highest honor in mathematics, explaining that he considered the prize award unjust for reasons that mathematicians have debated at length since.</p>
+<p>The remaining six problems, including the Navier-Stokes problem, are open.</p>
+</section>
+<section id="what-the-problem-actually-asks" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="what-the-problem-actually-asks"><span class="header-section-number">9.2</span> What the Problem Actually Asks</h2>
+<p>The Navier-Stokes Existence and Smoothness Problem is not a question about fluid flow, exactly. It is a question about partial differential equations.</p>
+<p>Here is the mathematical setup. Take a smooth initial velocity field <span class="math inline">\(\mathbf{u}_0(\mathbf{x})\)</span> — a function that specifies, at every point in three-dimensional space, an initial velocity. The Navier-Stokes equations then determine how this velocity field evolves forward in time. The question is: does the solution <em>always</em> remain smooth?</p>
+<p>“Smooth” has a precise mathematical meaning: the velocity and its derivatives of all orders exist and are finite everywhere. A smooth solution is one that does not develop singularities — points where the velocity or its gradient becomes infinite.</p>
+<p>The problem comes in two flavors:</p>
+<p><strong>Existence:</strong> Given smooth initial conditions, does a smooth solution exist for all time <span class="math inline">\(t &gt; 0\)</span>? (For all of time, not just for a short while.)</p>
+<p><strong>Smoothness (or regularity):</strong> If a solution exists, does it remain smooth, or can it develop singularities — “blow-up” in finite time?</p>
+<p>In two dimensions, both questions are answered: smooth solutions always exist and remain smooth. This was proved by Leray in 1934. The two-dimensional case is genuinely easier because the energy cascade works differently and the nonlinear term is better-behaved.</p>
+<p>In three dimensions, which is the physical case, both questions remain open. We know that smooth solutions exist for a short time after any smooth initial condition (proved by Leray and others). We do not know whether they persist forever.</p>
+</section>
+<section id="what-blow-up-would-mean" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="what-blow-up-would-mean"><span class="header-section-number">9.3</span> What Blow-Up Would Mean</h2>
+<p>If a three-dimensional Navier-Stokes solution could develop a singularity in finite time — if the velocity at some point became infinite in finite time — this would be, physically and mathematically, startling.</p>
+<p>Physically: infinite velocity is not physical. A real fluid, before reaching such a state, would involve effects (compressibility, non-Newtonian behavior, molecular-scale breakdown of the continuum approximation) that the idealized Navier-Stokes equations ignore. A mathematical blow-up would not mean that real fluids develop singularities; it would mean that the mathematical model breaks down before capturing the physical behavior.</p>
+<p>Mathematically: a blow-up solution would be evidence that the Navier-Stokes equations, as mathematical objects, have a kind of instability that we have not been able to rule out. It would not mean the equations are wrong for engineering purposes. It would mean they are incomplete as a mathematical theory.</p>
+<p>Most mathematicians who work on this problem expect that the equations do have smooth global solutions — that blow-up does not occur — but no one has been able to prove it.</p>
+</section>
+<section id="partial-results" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="partial-results"><span class="header-section-number">9.4</span> Partial Results</h2>
+<p>Progress since 2000 has been incremental and technical.</p>
+<p>In 2016, Terence Tao — the UCLA mathematician and 2006 Fields Medal winner — published a paper showing that a certain <em>averaged</em> version of the Navier-Stokes equations can develop finite-time blow-up. The averaged equations are not the Navier-Stokes equations; they are a simplified version designed to be more tractable. But the result showed that the structure of the equations is, in principle, compatible with blow-up, and identified what a blow-up in the real equations would have to look like: an “energy concentration machine” that funnels kinetic energy into progressively smaller scales in finite time. This is the cascade described by Kolmogorov, taken to an extreme conclusion.</p>
+<p>Tao’s paper is widely regarded as the most significant progress on the problem in years. It also makes clear why the problem is hard: the mechanism that could produce blow-up, if it exists, is precisely the cascade that turbulence exploits. The mathematical difficulty is not separate from the physical difficulty. They are the same difficulty.</p>
+<p>Other partial results establish conditions under which global smoothness <em>is</em> guaranteed. If the solution remains in certain function spaces, or if the velocity gradient satisfies certain bounds, then no blow-up occurs. The problem is that we cannot prove these conditions hold in general.</p>
+</section>
+<section id="why-it-matters-beyond-the-prize" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="why-it-matters-beyond-the-prize"><span class="header-section-number">9.5</span> Why It Matters Beyond the Prize</h2>
+<p>The Millennium Prize framing can make the problem sound like a curiosity — a million-dollar puzzle for mathematicians. The practical consequences of a resolution would be more significant than that.</p>
+<p>If blow-up is proved to occur, then the Navier-Stokes equations have a fundamental limitation as a model of viscous flow, and the field would need to understand where and how the model breaks down. This would not invalidate decades of CFD work — the equations work in practice — but it would change the mathematical foundations.</p>
+<p>If global smoothness is proved, the proof would likely introduce new mathematical tools for controlling the nonlinear term in the equations. Those tools would apply not just to Navier-Stokes but to a broad class of nonlinear PDEs in fluid mechanics, plasma physics, and general relativity. The mathematics that solves one hard problem of this type rarely solves only one problem.</p>
+<p>Either answer is a contribution. The prize is the small part.</p>
+</section>
+<section id="the-larger-picture" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="the-larger-picture"><span class="header-section-number">9.6</span> The Larger Picture</h2>
+<p>There is something philosophically interesting about the state of the Navier-Stokes equations in the early twenty-first century.</p>
+<p>These equations were written down in their final form in 1845. They have been used continuously since then to design ships, analyze blood flow, predict weather, and build aircraft. They are taught in every engineering school in the world. They are implemented in every commercial fluid-dynamics simulation package. The infrastructure of the modern world — bridges, pipelines, aircraft, cardiovascular implants, combustion chambers — was designed using them.</p>
+<p>And we do not know whether they always have solutions.</p>
+<p>This is not a paradox. Engineering and mathematical existence are different things. A CFD solution is a numerical approximation on a finite grid; it never asks whether the exact solution is smooth. In practice, the equations work. But the mathematical foundations of the theory — the question of whether the equations form a consistent, well-posed description of a physical reality — remain genuinely open.</p>
+<p>Navier got the right answer for the wrong reasons. We have been using the right answer for 180 years. We are still asking why it is right.</p>
+</section>
+<section id="summary" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.7</span> Summary</h2>
+<p>The Clay Millennium Prize Problem asks whether the three-dimensional Navier-Stokes equations always have smooth global solutions, or whether singularities can develop in finite time. In two dimensions the problem is solved; in three dimensions it is open. Leray proved that smooth solutions exist for short times. Tao’s 2016 paper showed that an averaged version can blow up, identifying the potential mechanism. A resolution either way would carry consequences for the mathematical foundations of nonlinear PDE theory beyond the Navier-Stokes equations specifically. The equations have been used successfully for 180 years without this question being answered.</p>
+</section>
+<section id="further-reading" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">9.8</span> Further Reading</h2>
+<ul>
+<li>Fefferman, C. “Existence and Smoothness of the Navier-Stokes Equation.” Clay Mathematics Institute, 2000. The official problem statement; clearly written for a mathematical audience.</li>
+<li>Tao, T. “Finite time blowup for an averaged three-dimensional Navier-Stokes equation.” <em>Journal of the American Mathematical Society</em>, 29 (2016): 601–674.</li>
+<li>Leray, J. “Sur le mouvement d’un liquide visqueux emplissant l’espace.” <em>Acta Mathematica</em>, 63 (1934): 193–248. The foundational paper on weak solutions and short-time existence.</li>
+<li>Doering, C.R. &amp; Gibbon, J.D. <em>Applied Analysis of the Navier-Stokes Equations</em>. Cambridge University Press, 1995. The most accessible rigorous treatment.</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./06-turbulence.html" class="pagination-link" aria-label="The Monster Inside the Equations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Monster Inside the Equations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "A Million Dollars for a Proof"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">number-sections:</span><span class="co"> true</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># A Million Dollars for a Proof</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand what the Clay Millennium Prize Problem for Navier-Stokes actually asks</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand the mathematical distinction between existence, uniqueness, and smoothness</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Know the current state of partial results toward a solution</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Appreciate why the answer matters beyond the prize</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Seven Problems</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>In May 2000, the Clay Mathematics Institute of Cambridge, Massachusetts, announced the Millennium Prize Problems: seven mathematical questions, each carrying a prize of one million dollars for a correct solution. The problems were chosen by a committee of leading mathematicians to represent the most important unsolved questions in the field.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>The list was:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Riemann Hypothesis</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The P versus NP Problem</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Hodge Conjecture</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Yang-Mills Existence and Mass Gap</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Birch and Swinnerton-Dyer Conjecture</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Navier-Stokes Existence and Smoothness Problem</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Poincaré Conjecture</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>By 2025, one problem has been solved. In 2003, the Russian mathematician Grigori Perelman proved the Poincaré Conjecture, completing a program developed by Richard Hamilton over many years. Perelman declined both the Clay Prize and the Fields Medal, the highest honor in mathematics, explaining that he considered the prize award unjust for reasons that mathematicians have debated at length since.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>The remaining six problems, including the Navier-Stokes problem, are open.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## What the Problem Actually Asks</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes Existence and Smoothness Problem is not a question about fluid flow, exactly. It is a question about partial differential equations.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Here is the mathematical setup. Take a smooth initial velocity field $\mathbf{u}_0(\mathbf{x})$ --- a function that specifies, at every point in three-dimensional space, an initial velocity. The Navier-Stokes equations then determine how this velocity field evolves forward in time. The question is: does the solution *always* remain smooth?</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>"Smooth" has a precise mathematical meaning: the velocity and its derivatives of all orders exist and are finite everywhere. A smooth solution is one that does not develop singularities --- points where the velocity or its gradient becomes infinite.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>The problem comes in two flavors:</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>**Existence:** Given smooth initial conditions, does a smooth solution exist for all time $t &gt; 0$? (For all of time, not just for a short while.)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>**Smoothness (or regularity):** If a solution exists, does it remain smooth, or can it develop singularities --- "blow-up" in finite time?</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>In two dimensions, both questions are answered: smooth solutions always exist and remain smooth. This was proved by Leray in 1934. The two-dimensional case is genuinely easier because the energy cascade works differently and the nonlinear term is better-behaved.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>In three dimensions, which is the physical case, both questions remain open. We know that smooth solutions exist for a short time after any smooth initial condition (proved by Leray and others). We do not know whether they persist forever.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## What Blow-Up Would Mean</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>If a three-dimensional Navier-Stokes solution could develop a singularity in finite time --- if the velocity at some point became infinite in finite time --- this would be, physically and mathematically, startling.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Physically: infinite velocity is not physical. A real fluid, before reaching such a state, would involve effects (compressibility, non-Newtonian behavior, molecular-scale breakdown of the continuum approximation) that the idealized Navier-Stokes equations ignore. A mathematical blow-up would not mean that real fluids develop singularities; it would mean that the mathematical model breaks down before capturing the physical behavior.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Mathematically: a blow-up solution would be evidence that the Navier-Stokes equations, as mathematical objects, have a kind of instability that we have not been able to rule out. It would not mean the equations are wrong for engineering purposes. It would mean they are incomplete as a mathematical theory.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>Most mathematicians who work on this problem expect that the equations do have smooth global solutions --- that blow-up does not occur --- but no one has been able to prove it.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Partial Results</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>Progress since 2000 has been incremental and technical.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>In 2016, Terence Tao --- the UCLA mathematician and 2006 Fields Medal winner --- published a paper showing that a certain *averaged* version of the Navier-Stokes equations can develop finite-time blow-up. The averaged equations are not the Navier-Stokes equations; they are a simplified version designed to be more tractable. But the result showed that the structure of the equations is, in principle, compatible with blow-up, and identified what a blow-up in the real equations would have to look like: an "energy concentration machine" that funnels kinetic energy into progressively smaller scales in finite time. This is the cascade described by Kolmogorov, taken to an extreme conclusion.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>Tao's paper is widely regarded as the most significant progress on the problem in years. It also makes clear why the problem is hard: the mechanism that could produce blow-up, if it exists, is precisely the cascade that turbulence exploits. The mathematical difficulty is not separate from the physical difficulty. They are the same difficulty.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>Other partial results establish conditions under which global smoothness *is* guaranteed. If the solution remains in certain function spaces, or if the velocity gradient satisfies certain bounds, then no blow-up occurs. The problem is that we cannot prove these conditions hold in general.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why It Matters Beyond the Prize</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>The Millennium Prize framing can make the problem sound like a curiosity --- a million-dollar puzzle for mathematicians. The practical consequences of a resolution would be more significant than that.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>If blow-up is proved to occur, then the Navier-Stokes equations have a fundamental limitation as a model of viscous flow, and the field would need to understand where and how the model breaks down. This would not invalidate decades of CFD work --- the equations work in practice --- but it would change the mathematical foundations.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>If global smoothness is proved, the proof would likely introduce new mathematical tools for controlling the nonlinear term in the equations. Those tools would apply not just to Navier-Stokes but to a broad class of nonlinear PDEs in fluid mechanics, plasma physics, and general relativity. The mathematics that solves one hard problem of this type rarely solves only one problem.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>Either answer is a contribution. The prize is the small part.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Larger Picture</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>There is something philosophically interesting about the state of the Navier-Stokes equations in the early twenty-first century.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>These equations were written down in their final form in 1845. They have been used continuously since then to design ships, analyze blood flow, predict weather, and build aircraft. They are taught in every engineering school in the world. They are implemented in every commercial fluid-dynamics simulation package. The infrastructure of the modern world --- bridges, pipelines, aircraft, cardiovascular implants, combustion chambers --- was designed using them.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>And we do not know whether they always have solutions.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>This is not a paradox. Engineering and mathematical existence are different things. A CFD solution is a numerical approximation on a finite grid; it never asks whether the exact solution is smooth. In practice, the equations work. But the mathematical foundations of the theory --- the question of whether the equations form a consistent, well-posed description of a physical reality --- remain genuinely open.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>Navier got the right answer for the wrong reasons. We have been using the right answer for 180 years. We are still asking why it is right.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>The Clay Millennium Prize Problem asks whether the three-dimensional Navier-Stokes equations always have smooth global solutions, or whether singularities can develop in finite time. In two dimensions the problem is solved; in three dimensions it is open. Leray proved that smooth solutions exist for short times. Tao's 2016 paper showed that an averaged version can blow up, identifying the potential mechanism. A resolution either way would carry consequences for the mathematical foundations of nonlinear PDE theory beyond the Navier-Stokes equations specifically. The equations have been used successfully for 180 years without this question being answered.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further Reading</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fefferman, C. "Existence and Smoothness of the Navier-Stokes Equation." Clay Mathematics Institute, 2000. The official problem statement; clearly written for a mathematical audience.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tao, T. "Finite time blowup for an averaged three-dimensional Navier-Stokes equation." *Journal of the American Mathematical Society*, 29 (2016): 601–674.</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Leray, J. "Sur le mouvement d'un liquide visqueux emplissant l'espace." *Acta Mathematica*, 63 (1934): 193–248. The foundational paper on weak solutions and short-time existence.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Doering, C.R. &amp; Gibbon, J.D. *Applied Analysis of the Navier-Stokes Equations*. Cambridge University Press, 1995. The most accessible rigorous treatment.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

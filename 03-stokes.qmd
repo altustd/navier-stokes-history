@@ -1,0 +1,74 @@
+---
+title: "The Cambridge Mathematician"
+number-sections: true
+---
+
+# The Cambridge Mathematician
+
+::: {.callout-note icon=false}
+## Learning Objectives
+- Understand Stokes's intellectual context at Cambridge and the continuum mechanics tradition
+- Follow the logic of his correct 1845 derivation via the stress tensor
+- Understand the difference between Navier's approach and Stokes's approach
+- Appreciate Stokes's other contributions beyond the Navier-Stokes equations
+:::
+
+## The Lucasian Chair
+
+The Lucasian Professorship of Mathematics at Cambridge University has been held by a remarkable collection of people. Isaac Newton occupied it from 1669 to 1702. Charles Babbage held it, intermittently and cantankerously, from 1828 to 1839. Paul Dirac held it from 1932 to 1969. Stephen Hawking held it from 1979 to 2009.
+
+George Gabriel Stokes held it from 1849 to 1903 --- fifty-four years, the longest tenure in the chair's history. He received it at the age of thirty, before he had done much of the work that would make him famous. He held it through the transformation of physics from a gentleman's pursuit into a professional discipline. He was still technically in office when he died.
+
+That he is not as well known as some of his predecessors and successors is partly a matter of personality. Stokes was methodical where Newton was inspired, scrupulous where Babbage was theatrical. He published slowly and carefully, preferring to be right rather than first, and history has rewarded this preference with somewhat less attention than it deserves.
+
+## Born in Sligo
+
+Stokes was born on 13 August 1819 in Skreen, a village in County Sligo on the west coast of Ireland, the youngest of six children of Gabriel Stokes, the Church of Ireland rector of Skreen parish. The rectory was a place of learning: his father read Latin and Greek for pleasure; his brothers went into engineering and medicine; the household assumed that education was what one did.
+
+He left Ireland at sixteen to study in Bristol, then went up to Cambridge in 1837. At Cambridge in the 1830s and 1840s, the training in mathematics was organized around a single culminating examination --- the Mathematical Tripos --- that ranked students from first to last with a precision that the university regarded as both meaningful and motivating. The top student was called the Senior Wrangler. The competition was intense. The mathematics required was formidable. The results were public.
+
+In January 1841, Stokes was named Senior Wrangler. He also won the first Smith's Prize, awarded for the best original mathematical work by a candidate in the year. Within the Cambridge system, this was as complete a validation as existed.
+
+## The Continuum Approach
+
+When Navier derived his equations in 1822, he built up from molecules. When Stokes approached the same problem in 1845, he started from the opposite end --- from the large scale, not the small.
+
+The continuum mechanics approach treats a fluid not as a collection of discrete molecules but as a continuous medium, described at every point by smoothly varying fields: velocity, pressure, density, stress. This is an idealization, just as the perfect fluid is an idealization, but it is a different and more tractable one. You do not need to know anything about molecules to use it. You need to know how the fluid deforms in response to forces.
+
+The key concept is the *stress tensor* --- a mathematical object that describes, at every point in the fluid, the force per unit area acting on any surface passing through that point. In a fluid at rest, the stress is purely pressure: a force acting equally in all directions, pushing inward. In a fluid in motion, the stress has an additional component: the viscous stress, which arises from velocity gradients and acts to resist them.
+
+Stokes's argument was this: for a Newtonian fluid --- one in which the viscous stress is proportional to the rate of strain (the velocity gradient) --- the most general linear, isotropic relationship between stress and strain rate takes a specific mathematical form. Writing it down and substituting into the momentum balance gives, for an incompressible fluid, exactly the same equation that Navier had obtained from his molecular model:
+
+$$\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \rho \mathbf{g}$$ {#eq-ns-stokes}
+
+Same equation, different foundation. Stokes's $\mu$ was not a molecular parameter but a phenomenological one: the dynamic viscosity, defined operationally as the ratio of shear stress to shear rate, measurable directly. This is the definition that survives in every fluid mechanics textbook written since.
+
+Stokes also worked out the compressible case, introducing a second viscosity coefficient for the volumetric deformation of the fluid --- a contribution that became important for acoustics and later for compressible aerodynamics. The incompressible case, which covers most practical flows, is the one usually called the Navier-Stokes equations.
+
+## Stokes's Law and Other Things
+
+Stokes was not a man who worked on one problem. In 1851 he published an analysis of the drag force on a sphere moving slowly through a viscous fluid at low Reynolds number. The result --- that the drag force is proportional to the sphere's velocity, its radius, and the fluid's viscosity, with a coefficient of $6\pi$ --- is called Stokes's law and is used routinely in sedimentation analysis, aerosol physics, and the design of centrifuges.
+
+In 1852 he published a paper on fluorescence --- specifically on the emission of light by materials at wavelengths longer than the wavelength of the exciting radiation. The phenomenon is now called Stokes shift, and the rule relating excitation and emission wavelengths is Stokes's law in a completely different context.
+
+He contributed to the mathematics of divergence theorems. He investigated the composition of sunlight through a prism and narrowly missed discovering solar spectroscopy, later published by Kirchhoff and Bunsen. He corresponded with Lord Kelvin about virtually everything. He served as Secretary, then President, of the Royal Society, and in both roles spent enormous amounts of time editing other people's work, refereeing papers, and writing letters that amounted to tutorial instruction for younger investigators.
+
+He was, in short, the kind of scientist that institutions run on --- not the genius who changes everything in a burst, but the steady, careful, comprehensive intelligence that turns insights into knowledge.
+
+## The Naming Question
+
+The equations are called the Navier-Stokes equations because both men's names are attached to them in the historical literature, with Navier's coming first because he was first. But the choice of these two names, out of the five men who derived the same equations, is somewhat arbitrary.
+
+Stokes himself never claimed priority over Navier, whom he acknowledged as the originator of the viscous term. What Stokes claimed, correctly, was that his derivation was on firmer physical ground --- that the molecular argument Navier used was not a reliable foundation even if it produced the right answer.
+
+The question of who deserves the credit and how credit should be divided among five independent derivations is the subject of the next chapter.
+
+## Summary
+
+George Gabriel Stokes held the Lucasian Chair at Cambridge for fifty-four years and published work that touched nearly every area of nineteenth-century physics. His 1845 derivation of the viscous flow equations used continuum mechanics and the stress tensor, reaching the same equations Navier had found in 1822 but from a physically correct and more general starting point. His definition of dynamic viscosity as a measurable, phenomenological parameter is the one still used. He was also the author of Stokes's law for drag on a sphere, the Stokes shift in fluorescence, and contributions to vector analysis that made his name permanent in the mathematical toolkit.
+
+## Further Reading
+
+- Darrigol, O. *Worlds of Flow*, Chapter 4. Detailed analysis of Stokes's derivation and its relationship to Navier's.
+- Stokes, G.G. "On the theories of the internal friction of fluids in motion." *Transactions of the Cambridge Philosophical Society*, 8 (1845): 287–305. The original; clear and readable.
+- Wilson, D.B. *George Gabriel Stokes: Life, Science and Faith*. Oxford University Press, 2014. The most complete biography.

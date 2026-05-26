@@ -1,0 +1,54 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Friction and Flow"
+  subtitle: "The History and Mystery of the Navier-Stokes Equations"
+  author: "Troy Altus"
+  date: "2026"
+  repo-url: https://github.com/altustd/navier-stokes-history
+  chapters:
+    - preface.qmd
+    - index.qmd
+    - 02-navier.qmd
+    - 03-stokes.qmd
+    - 04-five-derivations.qmd
+    - 05-physics.qmd
+    - 06-turbulence.qmd
+    - 07-millennium.qmd
+    - references.qmd
+  appendices:
+    - appendix-a-code.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    fig-align: center
+    code-fold: true
+    code-tools: true
+    mermaid:
+      theme: neutral
+  pdf:
+    documentclass: book
+    classoption: [letterpaper, 11pt]
+    geometry:
+      - top=1in
+      - bottom=1in
+      - left=1.25in
+      - right=1in
+    number-sections: true
+    colorlinks: true
+    toc: true
+    toc-depth: 3
+    pdf-engine: latexmk
+    pdf-engine-opts:
+      - -lualatex
+
+bibliography: references.bib
+execute:
+  warning: false
+  message: false
