@@ -3,8 +3,6 @@ title: "Five Men, One Equation"
 number-sections: true
 ---
 
-# Five Men, One Equation
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Know the five independent derivations of the viscous flow equations and their dates

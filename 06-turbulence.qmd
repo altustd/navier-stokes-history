@@ -3,8 +3,6 @@ title: "The Monster Inside the Equations"
 number-sections: true
 ---
 
-# The Monster Inside the Equations
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Understand what turbulence is physically and why it is hard

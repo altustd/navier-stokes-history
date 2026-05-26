@@ -3,8 +3,6 @@ title: "What the Equations Actually Say"
 number-sections: true
 ---
 
-# What the Equations Actually Say
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Read each term in the Navier-Stokes equations and understand its physical meaning

@@ -3,8 +3,6 @@ title: "The World Before Friction"
 number-sections: true
 ---
 
-# The World Before Friction
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Understand what Euler's equations describe and where they fail

@@ -3,8 +3,6 @@ title: "The Cambridge Mathematician"
 number-sections: true
 ---
 
-# The Cambridge Mathematician
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Understand Stokes's intellectual context at Cambridge and the continuum mechanics tradition

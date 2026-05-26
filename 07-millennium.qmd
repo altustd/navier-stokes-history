@@ -3,8 +3,6 @@ title: "A Million Dollars for a Proof"
 number-sections: true
 ---
 
-# A Million Dollars for a Proof
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Understand what the Clay Millennium Prize Problem for Navier-Stokes actually asks

@@ -258,14 +258,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-the-equations-actually-say" id="toc-what-the-equations-actually-say" class="nav-link active" data-scroll-target="#what-the-equations-actually-say"><span class="header-section-number">7</span> What the Equations Actually Say</a>
-  <ul class="collapse">
-  <li><a href="#reading-the-equations" id="toc-reading-the-equations" class="nav-link" data-scroll-target="#reading-the-equations"><span class="header-section-number">7.1</span> Reading the Equations</a></li>
-  <li><a href="#pipe-flow" id="toc-pipe-flow" class="nav-link" data-scroll-target="#pipe-flow"><span class="header-section-number">7.2</span> Pipe Flow</a></li>
-  <li><a href="#the-reynolds-number" id="toc-the-reynolds-number" class="nav-link" data-scroll-target="#the-reynolds-number"><span class="header-section-number">7.3</span> The Reynolds Number</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">7.4</span> Summary</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">7.5</span> Further Reading</a></li>
-  </ul></li>
+  <li><a href="#reading-the-equations" id="toc-reading-the-equations" class="nav-link active" data-scroll-target="#reading-the-equations"><span class="header-section-number">6.1</span> Reading the Equations</a></li>
+  <li><a href="#pipe-flow" id="toc-pipe-flow" class="nav-link" data-scroll-target="#pipe-flow"><span class="header-section-number">6.2</span> Pipe Flow</a></li>
+  <li><a href="#the-reynolds-number" id="toc-the-reynolds-number" class="nav-link" data-scroll-target="#the-reynolds-number"><span class="header-section-number">6.3</span> The Reynolds Number</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">6.4</span> Summary</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">6.5</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
@@ -291,8 +288,6 @@ window.Quarto = {
 </header>
 
 
-<section id="what-the-equations-actually-say" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> What the Equations Actually Say</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -311,27 +306,27 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<section id="reading-the-equations" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="reading-the-equations"><span class="header-section-number">7.1</span> Reading the Equations</h2>
+<section id="reading-the-equations" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="reading-the-equations"><span class="header-section-number">6.1</span> Reading the Equations</h2>
 <p>The Navier-Stokes equations for an incompressible Newtonian fluid are:</p>
-<p><span id="eq-cont"><span class="math display">\[\nabla \cdot \mathbf{u} = 0 \tag{7.1}\]</span></span></p>
-<p><span id="eq-mom"><span class="math display">\[\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \rho \mathbf{g} \tag{7.2}\]</span></span></p>
+<p><span id="eq-cont"><span class="math display">\[\nabla \cdot \mathbf{u} = 0 \tag{6.1}\]</span></span></p>
+<p><span id="eq-mom"><span class="math display">\[\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \rho \mathbf{g} \tag{6.2}\]</span></span></p>
 <p>Two equations, one for mass and one for momentum. Four unknowns: three components of velocity <span class="math inline">\(\mathbf{u} = (u, v, w)\)</span> and pressure <span class="math inline">\(p\)</span>.</p>
-<p><a href="#eq-cont" class="quarto-xref">Equation&nbsp;<span>7.1</span></a> says that the velocity field has no divergence — fluid neither accumulates nor disappears. Any flow pattern consistent with this equation conserves mass at every point.</p>
-<p><a href="#eq-mom" class="quarto-xref">Equation&nbsp;<span>7.2</span></a> is the interesting one. Read it term by term:</p>
+<p><a href="#eq-cont" class="quarto-xref">Equation&nbsp;<span>6.1</span></a> says that the velocity field has no divergence — fluid neither accumulates nor disappears. Any flow pattern consistent with this equation conserves mass at every point.</p>
+<p><a href="#eq-mom" class="quarto-xref">Equation&nbsp;<span>6.2</span></a> is the interesting one. Read it term by term:</p>
 <p><strong>Left side:</strong> <span class="math inline">\(\rho \left( \partial_t \mathbf{u} + \mathbf{u} \cdot \nabla \mathbf{u} \right)\)</span> is the inertial term — mass per unit volume times acceleration. The <span class="math inline">\(\partial_t \mathbf{u}\)</span> piece is the local acceleration, the change in velocity at a fixed point as time passes. The <span class="math inline">\(\mathbf{u} \cdot \nabla \mathbf{u}\)</span> piece is the convective acceleration, the change in velocity that occurs because the fluid is moving through space where the velocity field is not uniform. This nonlinear term — velocity times the gradient of velocity — is where all the difficulty lives.</p>
 <p><strong><span class="math inline">\(-\nabla p\)</span>:</strong> Pressure gradient, pointing from high pressure to low. Fluids move downhill in pressure.</p>
 <p><strong><span class="math inline">\(\mu \nabla^2 \mathbf{u}\)</span>:</strong> The viscous term. The Laplacian <span class="math inline">\(\nabla^2 \mathbf{u}\)</span> measures how the velocity at a point differs from the average velocity of its surroundings — a kind of smoothing operator. Multiply by <span class="math inline">\(\mu\)</span> and you have a force that drives the velocity toward uniformity. This is friction. This is the term that Navier and Stokes added to Euler.</p>
 <p><strong><span class="math inline">\(\rho \mathbf{g}\)</span>:</strong> Body force — usually gravity.</p>
 <p>The equation is Newton’s second law for a fluid parcel, written per unit volume. It is not exotic or mysterious. What makes it hard is the <span class="math inline">\(\mathbf{u} \cdot \nabla \mathbf{u}\)</span> term, which makes the equations nonlinear and couples the three velocity components together.</p>
 </section>
-<section id="pipe-flow" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="pipe-flow"><span class="header-section-number">7.2</span> Pipe Flow</h2>
+<section id="pipe-flow" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="pipe-flow"><span class="header-section-number">6.2</span> Pipe Flow</h2>
 <p>The simplest non-trivial solution of the Navier-Stokes equations is the one Navier himself could have computed: steady, fully developed flow through a circular pipe. Impose constant pressure gradient along the pipe, assume the flow is steady and purely axial, and the nonlinear term vanishes. What remains is a balance between pressure driving the flow and viscosity resisting it.</p>
 <p>The solution is a parabola. The velocity is maximum at the center of the pipe and zero at the wall, varying as:</p>
-<p><span id="eq-poiseuille"><span class="math display">\[u(r) = \frac{\Delta p}{4 \mu L} (R^2 - r^2) \tag{7.3}\]</span></span></p>
+<p><span id="eq-poiseuille"><span class="math display">\[u(r) = \frac{\Delta p}{4 \mu L} (R^2 - r^2) \tag{6.3}\]</span></span></p>
 <p>where <span class="math inline">\(r\)</span> is the distance from the centerline, <span class="math inline">\(R\)</span> is the pipe radius, <span class="math inline">\(L\)</span> is the pipe length, and <span class="math inline">\(\Delta p\)</span> is the pressure drop. This is the Hagen-Poiseuille profile.</p>
-<div id="fcb243fc" class="cell" data-execution_count="1">
+<div id="35022e3c" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -393,19 +388,19 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>The <span class="math inline">\(R^4\)</span> dependence in the Hagen-Poiseuille formula is striking. The volume flow rate through a pipe scales as the fourth power of the radius. Double the pipe diameter and you get sixteen times the flow rate at the same pressure. This relationship — derived from <a href="#eq-mom" class="quarto-xref">Equation&nbsp;<span>7.2</span></a> in a few lines — explains why arteries harden with age and why pipes sized correctly for a city water system must be sized correctly and cannot be easily undersized and compensated with increased pressure.</p>
+<p>The <span class="math inline">\(R^4\)</span> dependence in the Hagen-Poiseuille formula is striking. The volume flow rate through a pipe scales as the fourth power of the radius. Double the pipe diameter and you get sixteen times the flow rate at the same pressure. This relationship — derived from <a href="#eq-mom" class="quarto-xref">Equation&nbsp;<span>6.2</span></a> in a few lines — explains why arteries harden with age and why pipes sized correctly for a city water system must be sized correctly and cannot be easily undersized and compensated with increased pressure.</p>
 </section>
-<section id="the-reynolds-number" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="the-reynolds-number"><span class="header-section-number">7.3</span> The Reynolds Number</h2>
+<section id="the-reynolds-number" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="the-reynolds-number"><span class="header-section-number">6.3</span> The Reynolds Number</h2>
 <p>The Navier-Stokes equations contain two competing physical mechanisms: inertia (the <span class="math inline">\(\mathbf{u} \cdot \nabla \mathbf{u}\)</span> term) and viscosity (the <span class="math inline">\(\mu \nabla^2 \mathbf{u}\)</span> term). The ratio of their characteristic magnitudes defines the most important dimensionless parameter in fluid mechanics.</p>
 <p>Scale the inertial term: <span class="math inline">\(\rho |\mathbf{u} \cdot \nabla \mathbf{u}| \sim \rho U^2 / L\)</span>, where <span class="math inline">\(U\)</span> is a characteristic velocity and <span class="math inline">\(L\)</span> is a characteristic length.</p>
 <p>Scale the viscous term: <span class="math inline">\(\mu |\nabla^2 \mathbf{u}| \sim \mu U / L^2\)</span>.</p>
 <p>Their ratio:</p>
-<p><span id="eq-reynolds"><span class="math display">\[Re = \frac{\rho U L}{\mu} = \frac{U L}{\nu} \tag{7.4}\]</span></span></p>
+<p><span id="eq-reynolds"><span class="math display">\[Re = \frac{\rho U L}{\mu} = \frac{U L}{\nu} \tag{6.4}\]</span></span></p>
 <p>where <span class="math inline">\(\nu = \mu/\rho\)</span> is the kinematic viscosity. This is the Reynolds number, named after Osborne Reynolds, who used it in 1883 to characterize the transition from smooth laminar flow to chaotic turbulent flow.</p>
 <p>Low Reynolds number: viscosity dominates. The fluid behaves smoothly and predictably. Think of honey flowing out of a jar, or a bacterium swimming through water.</p>
-<p>High Reynolds number: inertia dominates. The nonlinear term in <a href="#eq-mom" class="quarto-xref">Equation&nbsp;<span>7.2</span></a> becomes large relative to the viscous term, smooth solutions become unstable, and the flow transitions to turbulence.</p>
-<div id="e6bb6641" class="cell" data-execution_count="2">
+<p>High Reynolds number: inertia dominates. The nonlinear term in <a href="#eq-mom" class="quarto-xref">Equation&nbsp;<span>6.2</span></a> becomes large relative to the viscous term, smooth solutions become unstable, and the flow transitions to turbulence.</p>
+<div id="ec53d778" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -456,12 +451,12 @@ window.Quarto = {
 <p>The Reynolds number is one of the most useful single numbers in engineering. A pipe flow with <span class="math inline">\(Re &lt; 2300\)</span> is reliably laminar; above <span class="math inline">\(Re \approx 4000\)</span> it is reliably turbulent; in between, it may be either depending on disturbances. A wing with <span class="math inline">\(Re \approx 10^6\)</span> carries turbulent boundary layers on most of its surface. A bacterium swimming at <span class="math inline">\(Re \approx 10^{-4}\)</span> lives in a world where viscosity is overwhelming and inertia is negligible.</p>
 <p>Same equations, same parameters, wildly different behaviors depending on their ratio.</p>
 </section>
-<section id="summary" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.4</span> Summary</h2>
+<section id="summary" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.4</span> Summary</h2>
 <p>The Navier-Stokes momentum equation is Newton’s second law for a fluid parcel, with terms representing local acceleration, convective acceleration, pressure, viscous diffusion, and body forces. The nonlinear convective term is the source of mathematical difficulty. The Hagen-Poiseuille solution for pipe flow — a parabolic velocity profile with flow rate proportional to <span class="math inline">\(R^4\)</span> — is the simplest exact solution and follows directly from the equations. The Reynolds number, the ratio of inertial to viscous forces, determines whether a flow is laminar, transitional, or turbulent. High Reynolds number is where the equations become practically unsolvable in closed form.</p>
 </section>
-<section id="further-reading" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">7.5</span> Further Reading</h2>
+<section id="further-reading" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">6.5</span> Further Reading</h2>
 <ul>
 <li>White, F.M. <em>Fluid Mechanics</em>, 8th ed.&nbsp;McGraw-Hill, 2015. Chapter 6 covers pipe flow; Chapter 1 covers viscosity.</li>
 <li>Reynolds, O. “An experimental investigation of the circumstances which determine whether the motion of water shall be direct or sinuous.” <em>Philosophical Transactions of the Royal Society</em>, 174 (1883): 935–982. The original description of the transition to turbulence.</li>
@@ -471,7 +466,6 @@ window.Quarto = {
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -943,175 +937,173 @@ window.Quarto = {
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">number-sections:</span><span class="co"> true</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># What the Equations Actually Say</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Read each term in the Navier-Stokes equations and understand its physical meaning</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand the Hagen-Poiseuille solution for pipe flow</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand the Reynolds number as a dimensionless ratio of inertia to viscosity</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visualize velocity profiles and the laminar-to-turbulent transition</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Read each term in the Navier-Stokes equations and understand its physical meaning</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand the Hagen-Poiseuille solution for pipe flow</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand the Reynolds number as a dimensionless ratio of inertia to viscosity</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visualize velocity profiles and the laminar-to-turbulent transition</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading the Equations</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading the Equations</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes equations for an incompressible Newtonian fluid are:</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes equations for an incompressible Newtonian fluid are:</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>$$\nabla \cdot \mathbf{u} = 0$$ {#eq-cont}</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>$$\nabla \cdot \mathbf{u} = 0$$ {#eq-cont}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>$$\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \rho \mathbf{g}$$ {#eq-mom}</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>$$\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \rho \mathbf{g}$$ {#eq-mom}</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>Two equations, one for mass and one for momentum. Four unknowns: three components of velocity $\mathbf{u} = (u, v, w)$ and pressure $p$.</span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>Two equations, one for mass and one for momentum. Four unknowns: three components of velocity $\mathbf{u} = (u, v, w)$ and pressure $p$.</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>@eq-cont says that the velocity field has no divergence --- fluid neither accumulates nor disappears. Any flow pattern consistent with this equation conserves mass at every point.</span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>@eq-cont says that the velocity field has no divergence --- fluid neither accumulates nor disappears. Any flow pattern consistent with this equation conserves mass at every point.</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>@eq-mom is the interesting one. Read it term by term:</span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>@eq-mom is the interesting one. Read it term by term:</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>**Left side:** $\rho \left( \partial_t \mathbf{u} + \mathbf{u} \cdot \nabla \mathbf{u} \right)$ is the inertial term --- mass per unit volume times acceleration. The $\partial_t \mathbf{u}$ piece is the local acceleration, the change in velocity at a fixed point as time passes. The $\mathbf{u} \cdot \nabla \mathbf{u}$ piece is the convective acceleration, the change in velocity that occurs because the fluid is moving through space where the velocity field is not uniform. This nonlinear term --- velocity times the gradient of velocity --- is where all the difficulty lives.</span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>**Left side:** $\rho \left( \partial_t \mathbf{u} + \mathbf{u} \cdot \nabla \mathbf{u} \right)$ is the inertial term --- mass per unit volume times acceleration. The $\partial_t \mathbf{u}$ piece is the local acceleration, the change in velocity at a fixed point as time passes. The $\mathbf{u} \cdot \nabla \mathbf{u}$ piece is the convective acceleration, the change in velocity that occurs because the fluid is moving through space where the velocity field is not uniform. This nonlinear term --- velocity times the gradient of velocity --- is where all the difficulty lives.</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>**$-\nabla p$:** Pressure gradient, pointing from high pressure to low. Fluids move downhill in pressure.</span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>**$-\nabla p$:** Pressure gradient, pointing from high pressure to low. Fluids move downhill in pressure.</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>**$\mu \nabla^2 \mathbf{u}$:** The viscous term. The Laplacian $\nabla^2 \mathbf{u}$ measures how the velocity at a point differs from the average velocity of its surroundings --- a kind of smoothing operator. Multiply by $\mu$ and you have a force that drives the velocity toward uniformity. This is friction. This is the term that Navier and Stokes added to Euler.</span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>**$\mu \nabla^2 \mathbf{u}$:** The viscous term. The Laplacian $\nabla^2 \mathbf{u}$ measures how the velocity at a point differs from the average velocity of its surroundings --- a kind of smoothing operator. Multiply by $\mu$ and you have a force that drives the velocity toward uniformity. This is friction. This is the term that Navier and Stokes added to Euler.</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>**$\rho \mathbf{g}$:** Body force --- usually gravity.</span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>**$\rho \mathbf{g}$:** Body force --- usually gravity.</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>The equation is Newton's second law for a fluid parcel, written per unit volume. It is not exotic or mysterious. What makes it hard is the $\mathbf{u} \cdot \nabla \mathbf{u}$ term, which makes the equations nonlinear and couples the three velocity components together.</span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>The equation is Newton's second law for a fluid parcel, written per unit volume. It is not exotic or mysterious. What makes it hard is the $\mathbf{u} \cdot \nabla \mathbf{u}$ term, which makes the equations nonlinear and couples the three velocity components together.</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pipe Flow</span></span>
 <span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pipe Flow</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>The simplest non-trivial solution of the Navier-Stokes equations is the one Navier himself could have computed: steady, fully developed flow through a circular pipe. Impose constant pressure gradient along the pipe, assume the flow is steady and purely axial, and the nonlinear term vanishes. What remains is a balance between pressure driving the flow and viscosity resisting it.</span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>The simplest non-trivial solution of the Navier-Stokes equations is the one Navier himself could have computed: steady, fully developed flow through a circular pipe. Impose constant pressure gradient along the pipe, assume the flow is steady and purely axial, and the nonlinear term vanishes. What remains is a balance between pressure driving the flow and viscosity resisting it.</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>The solution is a parabola. The velocity is maximum at the center of the pipe and zero at the wall, varying as:</span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>The solution is a parabola. The velocity is maximum at the center of the pipe and zero at the wall, varying as:</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>$$u(r) = \frac{\Delta p}{4 \mu L} (R^2 - r^2)$$ {#eq-poiseuille}</span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>$$u(r) = \frac{\Delta p}{4 \mu L} (R^2 - r^2)$$ {#eq-poiseuille}</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>where $r$ is the distance from the centerline, $R$ is the pipe radius, $L$ is the pipe length, and $\Delta p$ is the pressure drop. This is the Hagen-Poiseuille profile.</span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>where $r$ is the distance from the centerline, $R$ is the pipe radius, $L$ is the pipe length, and $\Delta p$ is the pressure drop. This is the Hagen-Poiseuille profile.</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="fl">4.5</span>))</span>
 <span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="fl">4.5</span>))</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Left: velocity profile across pipe cross-section</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">400</span>)</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalized: u(r) = 1 - r^2 (so U_max = 1 at r=0)</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> r<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> axes[<span class="dv">0</span>]</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>ax.plot(u, r, color<span class="op">=</span><span class="st">'#4f8ef7'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'#2a2d3a'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>ax.fill_betweenx(r, <span class="dv">0</span>, u, alpha<span class="op">=</span><span class="fl">0.12</span>, color<span class="op">=</span><span class="st">'#4f8ef7'</span>)</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Velocity $u/U_</span><span class="sc">{max}</span><span class="st">$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Radial position $r/R$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Hagen-Poiseuille Velocity Profile'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.05</span>, <span class="fl">1.15</span>)</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">1.05</span>, <span class="fl">1.05</span>)</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">'Parabolic:</span><span class="ch">\n</span><span class="st">$u(r) = U_</span><span class="sc">{max}</span><span class="st">(1 - r^2/R^2)$'</span>,</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(<span class="fl">0.6</span>, <span class="fl">0.0</span>), fontsize<span class="op">=</span><span class="fl">9.5</span>, color<span class="op">=</span><span class="st">'#333'</span>,</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">'round,pad=0.3'</span>, fc<span class="op">=</span><span class="st">'white'</span>, ec<span class="op">=</span><span class="st">'#ccc'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>))</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Right: flow rate vs radius (Q ~ R^4)</span></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>R_vals <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="fl">2.0</span>, <span class="dv">200</span>)</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Q = pi * delta_p * R^4 / (8 * mu * L) — normalized to Q=1 at R=1</span></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> R_vals<span class="op">**</span><span class="dv">4</span></span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> axes[<span class="dv">1</span>]</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>ax2.plot(R_vals, Q, color<span class="op">=</span><span class="st">'#e06c4a'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>ax2.fill_between(R_vals, <span class="dv">0</span>, Q, alpha<span class="op">=</span><span class="fl">0.12</span>, color<span class="op">=</span><span class="st">'#e06c4a'</span>)</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'Pipe radius $R/R_0$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Flow rate $Q/Q_0$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Flow Rate Scales as $R^4$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>ax2.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>ax2.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>ax2.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Double the radius</span><span class="ch">\n</span><span class="st">→ 16× the flow rate'</span>,</span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(<span class="fl">1.5</span>, <span class="dv">8</span>), fontsize<span class="op">=</span><span class="fl">9.5</span>, color<span class="op">=</span><span class="st">'#333'</span>,</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">'round,pad=0.3'</span>, fc<span class="op">=</span><span class="st">'white'</span>, ec<span class="op">=</span><span class="st">'#ccc'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>))</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'docs/pipe-flow.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Left: velocity profile across pipe cross-section</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">400</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalized: u(r) = 1 - r^2 (so U_max = 1 at r=0)</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> r<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> axes[<span class="dv">0</span>]</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>ax.plot(u, r, color<span class="op">=</span><span class="st">'#4f8ef7'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'#2a2d3a'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>ax.fill_betweenx(r, <span class="dv">0</span>, u, alpha<span class="op">=</span><span class="fl">0.12</span>, color<span class="op">=</span><span class="st">'#4f8ef7'</span>)</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Velocity $u/U_</span><span class="sc">{max}</span><span class="st">$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Radial position $r/R$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Hagen-Poiseuille Velocity Profile'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.05</span>, <span class="fl">1.15</span>)</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">1.05</span>, <span class="fl">1.05</span>)</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">'Parabolic:</span><span class="ch">\n</span><span class="st">$u(r) = U_</span><span class="sc">{max}</span><span class="st">(1 - r^2/R^2)$'</span>,</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(<span class="fl">0.6</span>, <span class="fl">0.0</span>), fontsize<span class="op">=</span><span class="fl">9.5</span>, color<span class="op">=</span><span class="st">'#333'</span>,</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">'round,pad=0.3'</span>, fc<span class="op">=</span><span class="st">'white'</span>, ec<span class="op">=</span><span class="st">'#ccc'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>))</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Right: flow rate vs radius (Q ~ R^4)</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>R_vals <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="fl">2.0</span>, <span class="dv">200</span>)</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Q = pi * delta_p * R^4 / (8 * mu * L) — normalized to Q=1 at R=1</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> R_vals<span class="op">**</span><span class="dv">4</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> axes[<span class="dv">1</span>]</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>ax2.plot(R_vals, Q, color<span class="op">=</span><span class="st">'#e06c4a'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>ax2.fill_between(R_vals, <span class="dv">0</span>, Q, alpha<span class="op">=</span><span class="fl">0.12</span>, color<span class="op">=</span><span class="st">'#e06c4a'</span>)</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'Pipe radius $R/R_0$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Flow rate $Q/Q_0$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Flow Rate Scales as $R^4$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>ax2.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>ax2.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>ax2.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Double the radius</span><span class="ch">\n</span><span class="st">→ 16× the flow rate'</span>,</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(<span class="fl">1.5</span>, <span class="dv">8</span>), fontsize<span class="op">=</span><span class="fl">9.5</span>, color<span class="op">=</span><span class="st">'#333'</span>,</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">'round,pad=0.3'</span>, fc<span class="op">=</span><span class="st">'white'</span>, ec<span class="op">=</span><span class="st">'#ccc'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>))</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'docs/pipe-flow.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>The $R^4$ dependence in the Hagen-Poiseuille formula is striking. The volume flow rate through a pipe scales as the fourth power of the radius. Double the pipe diameter and you get sixteen times the flow rate at the same pressure. This relationship --- derived from @eq-mom in a few lines --- explains why arteries harden with age and why pipes sized correctly for a city water system must be sized correctly and cannot be easily undersized and compensated with increased pressure.</span>
 <span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>The $R^4$ dependence in the Hagen-Poiseuille formula is striking. The volume flow rate through a pipe scales as the fourth power of the radius. Double the pipe diameter and you get sixteen times the flow rate at the same pressure. This relationship --- derived from @eq-mom in a few lines --- explains why arteries harden with age and why pipes sized correctly for a city water system must be sized correctly and cannot be easily undersized and compensated with increased pressure.</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Reynolds Number</span></span>
 <span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Reynolds Number</span></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes equations contain two competing physical mechanisms: inertia (the $\mathbf{u} \cdot \nabla \mathbf{u}$ term) and viscosity (the $\mu \nabla^2 \mathbf{u}$ term). The ratio of their characteristic magnitudes defines the most important dimensionless parameter in fluid mechanics.</span>
 <span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes equations contain two competing physical mechanisms: inertia (the $\mathbf{u} \cdot \nabla \mathbf{u}$ term) and viscosity (the $\mu \nabla^2 \mathbf{u}$ term). The ratio of their characteristic magnitudes defines the most important dimensionless parameter in fluid mechanics.</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>Scale the inertial term: $\rho |\mathbf{u} \cdot \nabla \mathbf{u}| \sim \rho U^2 / L$, where $U$ is a characteristic velocity and $L$ is a characteristic length.</span>
 <span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>Scale the inertial term: $\rho |\mathbf{u} \cdot \nabla \mathbf{u}| \sim \rho U^2 / L$, where $U$ is a characteristic velocity and $L$ is a characteristic length.</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>Scale the viscous term: $\mu |\nabla^2 \mathbf{u}| \sim \mu U / L^2$.</span>
 <span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Scale the viscous term: $\mu |\nabla^2 \mathbf{u}| \sim \mu U / L^2$.</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Their ratio:</span>
 <span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>Their ratio:</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>$$Re = \frac{\rho U L}{\mu} = \frac{U L}{\nu}$$ {#eq-reynolds}</span>
 <span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>$$Re = \frac{\rho U L}{\mu} = \frac{U L}{\nu}$$ {#eq-reynolds}</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>where $\nu = \mu/\rho$ is the kinematic viscosity. This is the Reynolds number, named after Osborne Reynolds, who used it in 1883 to characterize the transition from smooth laminar flow to chaotic turbulent flow.</span>
 <span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>where $\nu = \mu/\rho$ is the kinematic viscosity. This is the Reynolds number, named after Osborne Reynolds, who used it in 1883 to characterize the transition from smooth laminar flow to chaotic turbulent flow.</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>Low Reynolds number: viscosity dominates. The fluid behaves smoothly and predictably. Think of honey flowing out of a jar, or a bacterium swimming through water.</span>
 <span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>Low Reynolds number: viscosity dominates. The fluid behaves smoothly and predictably. Think of honey flowing out of a jar, or a bacterium swimming through water.</span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>High Reynolds number: inertia dominates. The nonlinear term in @eq-mom becomes large relative to the viscous term, smooth solutions become unstable, and the flow transitions to turbulence.</span>
 <span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>High Reynolds number: inertia dominates. The nonlinear term in @eq-mom becomes large relative to the viscous term, smooth solutions become unstable, and the flow transitions to turbulence.</span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">4</span>))</span>
 <span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">4</span>))</span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi, <span class="dv">500</span>)</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>cases <span class="op">=</span> [</span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Re'</span>: <span class="dv">100</span>,   <span class="st">'noise'</span>: <span class="fl">0.0</span>,  <span class="st">'title'</span>: <span class="st">'Laminar</span><span class="ch">\n</span><span class="st">$Re = 100$'</span>,   <span class="st">'color'</span>: <span class="st">'#4f8ef7'</span>},</span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Re'</span>: <span class="dv">2300</span>,  <span class="st">'noise'</span>: <span class="fl">0.15</span>, <span class="st">'title'</span>: <span class="st">'Transitional</span><span class="ch">\n</span><span class="st">$Re ≈ 2300$'</span>, <span class="st">'color'</span>: <span class="st">'#a47ee8'</span>},</span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Re'</span>: <span class="dv">50000</span>, <span class="st">'noise'</span>: <span class="fl">0.45</span>, <span class="st">'title'</span>: <span class="st">'Turbulent</span><span class="ch">\n</span><span class="st">$Re = 50{,}000$'</span>, <span class="st">'color'</span>: <span class="st">'#e06c4a'</span>},</span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, case <span class="kw">in</span> <span class="bu">zip</span>(axes, cases):</span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    y_base <span class="op">=</span> np.sin(x <span class="op">*</span> <span class="fl">0.5</span>) <span class="op">*</span> <span class="fl">0.3</span> <span class="op">+</span> <span class="fl">0.5</span></span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>    noise <span class="op">=</span> np.random.normal(<span class="dv">0</span>, case[<span class="st">'noise'</span>], <span class="bu">len</span>(x))</span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y_base <span class="op">+</span> noise <span class="op">*</span> np.exp(<span class="op">-</span><span class="fl">0.1</span> <span class="op">*</span> (x <span class="op">-</span> np.pi)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="fl">0.2</span> <span class="op">*</span> x)</span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.clip(y, <span class="fl">0.05</span>, <span class="fl">0.95</span>)</span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, color<span class="op">=</span>case[<span class="st">'color'</span>], linewidth<span class="op">=</span><span class="fl">1.8</span>, alpha<span class="op">=</span><span class="fl">0.85</span>)</span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi)</span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.15</span>)</span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>    ax.set_title(case[<span class="st">'title'</span>], fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Downstream distance'</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ax <span class="op">==</span> axes[<span class="dv">0</span>]:</span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">'Streamline position'</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks([])</span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>    ax.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Flow Regime as a Function of Reynolds Number'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, y<span class="op">=</span><span class="fl">1.02</span>)</span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'docs/reynolds-regimes.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi, <span class="dv">500</span>)</span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>cases <span class="op">=</span> [</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Re'</span>: <span class="dv">100</span>,   <span class="st">'noise'</span>: <span class="fl">0.0</span>,  <span class="st">'title'</span>: <span class="st">'Laminar</span><span class="ch">\n</span><span class="st">$Re = 100$'</span>,   <span class="st">'color'</span>: <span class="st">'#4f8ef7'</span>},</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Re'</span>: <span class="dv">2300</span>,  <span class="st">'noise'</span>: <span class="fl">0.15</span>, <span class="st">'title'</span>: <span class="st">'Transitional</span><span class="ch">\n</span><span class="st">$Re ≈ 2300$'</span>, <span class="st">'color'</span>: <span class="st">'#a47ee8'</span>},</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Re'</span>: <span class="dv">50000</span>, <span class="st">'noise'</span>: <span class="fl">0.45</span>, <span class="st">'title'</span>: <span class="st">'Turbulent</span><span class="ch">\n</span><span class="st">$Re = 50{,}000$'</span>, <span class="st">'color'</span>: <span class="st">'#e06c4a'</span>},</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, case <span class="kw">in</span> <span class="bu">zip</span>(axes, cases):</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>    y_base <span class="op">=</span> np.sin(x <span class="op">*</span> <span class="fl">0.5</span>) <span class="op">*</span> <span class="fl">0.3</span> <span class="op">+</span> <span class="fl">0.5</span></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>    noise <span class="op">=</span> np.random.normal(<span class="dv">0</span>, case[<span class="st">'noise'</span>], <span class="bu">len</span>(x))</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y_base <span class="op">+</span> noise <span class="op">*</span> np.exp(<span class="op">-</span><span class="fl">0.1</span> <span class="op">*</span> (x <span class="op">-</span> np.pi)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="fl">0.2</span> <span class="op">*</span> x)</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.clip(y, <span class="fl">0.05</span>, <span class="fl">0.95</span>)</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, color<span class="op">=</span>case[<span class="st">'color'</span>], linewidth<span class="op">=</span><span class="fl">1.8</span>, alpha<span class="op">=</span><span class="fl">0.85</span>)</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi)</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.15</span>)</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>    ax.set_title(case[<span class="st">'title'</span>], fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Downstream distance'</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ax <span class="op">==</span> axes[<span class="dv">0</span>]:</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">'Streamline position'</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks([])</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>    ax.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Flow Regime as a Function of Reynolds Number'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, y<span class="op">=</span><span class="fl">1.02</span>)</span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'docs/reynolds-regimes.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>The Reynolds number is one of the most useful single numbers in engineering. A pipe flow with $Re &lt; 2300$ is reliably laminar; above $Re \approx 4000$ it is reliably turbulent; in between, it may be either depending on disturbances. A wing with $Re \approx 10^6$ carries turbulent boundary layers on most of its surface. A bacterium swimming at $Re \approx 10^{-4}$ lives in a world where viscosity is overwhelming and inertia is negligible.</span>
 <span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>The Reynolds number is one of the most useful single numbers in engineering. A pipe flow with $Re &lt; 2300$ is reliably laminar; above $Re \approx 4000$ it is reliably turbulent; in between, it may be either depending on disturbances. A wing with $Re \approx 10^6$ carries turbulent boundary layers on most of its surface. A bacterium swimming at $Re \approx 10^{-4}$ lives in a world where viscosity is overwhelming and inertia is negligible.</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>Same equations, same parameters, wildly different behaviors depending on their ratio.</span>
 <span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>Same equations, same parameters, wildly different behaviors depending on their ratio.</span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
 <span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes momentum equation is Newton's second law for a fluid parcel, with terms representing local acceleration, convective acceleration, pressure, viscous diffusion, and body forces. The nonlinear convective term is the source of mathematical difficulty. The Hagen-Poiseuille solution for pipe flow --- a parabolic velocity profile with flow rate proportional to $R^4$ --- is the simplest exact solution and follows directly from the equations. The Reynolds number, the ratio of inertial to viscous forces, determines whether a flow is laminar, transitional, or turbulent. High Reynolds number is where the equations become practically unsolvable in closed form.</span>
 <span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>The Navier-Stokes momentum equation is Newton's second law for a fluid parcel, with terms representing local acceleration, convective acceleration, pressure, viscous diffusion, and body forces. The nonlinear convective term is the source of mathematical difficulty. The Hagen-Poiseuille solution for pipe flow --- a parabolic velocity profile with flow rate proportional to $R^4$ --- is the simplest exact solution and follows directly from the equations. The Reynolds number, the ratio of inertial to viscous forces, determines whether a flow is laminar, transitional, or turbulent. High Reynolds number is where the equations become practically unsolvable in closed form.</span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further Reading</span></span>
 <span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further Reading</span></span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>White, F.M. *Fluid Mechanics*, 8th ed. McGraw-Hill, 2015. Chapter 6 covers pipe flow; Chapter 1 covers viscosity.</span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reynolds, O. "An experimental investigation of the circumstances which determine whether the motion of water shall be direct or sinuous." *Philosophical Transactions of the Royal Society*, 174 (1883): 935–982. The original description of the transition to turbulence.</span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Batchelor, G.K. *An Introduction to Fluid Dynamics*. Cambridge University Press, 1967. The standard graduate text; Chapter 4 covers viscous flow.</span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>White, F.M. *Fluid Mechanics*, 8th ed. McGraw-Hill, 2015. Chapter 6 covers pipe flow; Chapter 1 covers viscosity.</span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reynolds, O. "An experimental investigation of the circumstances which determine whether the motion of water shall be direct or sinuous." *Philosophical Transactions of the Royal Society*, 174 (1883): 935–982. The original description of the transition to turbulence.</span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Batchelor, G.K. *An Introduction to Fluid Dynamics*. Cambridge University Press, 1967. The standard graduate text; Chapter 4 covers viscous flow.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

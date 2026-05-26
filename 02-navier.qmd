@@ -3,8 +3,6 @@ title: "The Engineer Who Got the Right Answer"
 number-sections: true
 ---
 
-# The Engineer Who Got the Right Answer
-
 ::: {.callout-note icon=false}
 ## Learning Objectives
 - Understand Navier's background as an engineer, not a pure mathematician

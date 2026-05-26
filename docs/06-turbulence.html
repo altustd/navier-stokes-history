@@ -258,15 +258,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-monster-inside-the-equations" id="toc-the-monster-inside-the-equations" class="nav-link active" data-scroll-target="#the-monster-inside-the-equations"><span class="header-section-number">8</span> The Monster Inside the Equations</a>
-  <ul class="collapse">
-  <li><a href="#what-turbulence-looks-like" id="toc-what-turbulence-looks-like" class="nav-link" data-scroll-target="#what-turbulence-looks-like"><span class="header-section-number">8.1</span> What Turbulence Looks Like</a></li>
-  <li><a href="#reynoldss-pipe" id="toc-reynoldss-pipe" class="nav-link" data-scroll-target="#reynoldss-pipe"><span class="header-section-number">8.2</span> Reynolds’s Pipe</a></li>
-  <li><a href="#kolmogorovs-cascade" id="toc-kolmogorovs-cascade" class="nav-link" data-scroll-target="#kolmogorovs-cascade"><span class="header-section-number">8.3</span> Kolmogorov’s Cascade</a></li>
-  <li><a href="#what-cfd-actually-does" id="toc-what-cfd-actually-does" class="nav-link" data-scroll-target="#what-cfd-actually-does"><span class="header-section-number">8.4</span> What CFD Actually Does</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.5</span> Summary</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">8.6</span> Further Reading</a></li>
-  </ul></li>
+  <li><a href="#what-turbulence-looks-like" id="toc-what-turbulence-looks-like" class="nav-link active" data-scroll-target="#what-turbulence-looks-like"><span class="header-section-number">7.1</span> What Turbulence Looks Like</a></li>
+  <li><a href="#reynoldss-pipe" id="toc-reynoldss-pipe" class="nav-link" data-scroll-target="#reynoldss-pipe"><span class="header-section-number">7.2</span> Reynolds’s Pipe</a></li>
+  <li><a href="#kolmogorovs-cascade" id="toc-kolmogorovs-cascade" class="nav-link" data-scroll-target="#kolmogorovs-cascade"><span class="header-section-number">7.3</span> Kolmogorov’s Cascade</a></li>
+  <li><a href="#what-cfd-actually-does" id="toc-what-cfd-actually-does" class="nav-link" data-scroll-target="#what-cfd-actually-does"><span class="header-section-number">7.4</span> What CFD Actually Does</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">7.5</span> Summary</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">7.6</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
@@ -292,8 +289,6 @@ window.Quarto = {
 </header>
 
 
-<section id="the-monster-inside-the-equations" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> The Monster Inside the Equations</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -312,27 +307,27 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<section id="what-turbulence-looks-like" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="what-turbulence-looks-like"><span class="header-section-number">8.1</span> What Turbulence Looks Like</h2>
+<section id="what-turbulence-looks-like" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="what-turbulence-looks-like"><span class="header-section-number">7.1</span> What Turbulence Looks Like</h2>
 <p>Light a match and hold it still. For the first inch or two, the hot air above the flame rises smoothly, in orderly layers, the plume a well-behaved column. Then, somewhere above that, it breaks apart. The smooth column dissolves into eddies, and the eddies dissolve into smaller eddies, and the whole structure flickers and writhes with no apparent pattern. You have watched the transition from laminar to turbulent flow.</p>
 <p>This transition is not a defect of the flame or a failure of the air. It is the Navier-Stokes equations doing exactly what they do at high Reynolds number. The smooth solution becomes unstable. Small perturbations — a vibration, a slight asymmetry, the motion of your breath — grow rather than decay. The flow reorganizes into a state that is not disordered in any absolute sense but that is sensitive to initial conditions in ways that make detailed prediction effectively impossible.</p>
 <p>Turbulence is not chaos in the technical mathematical sense, though it shares some properties with chaotic systems. It is a regime of the Navier-Stokes equations that we can simulate but not solve analytically, that we can model but not derive, and whose statistical properties we can partially predict but whose instantaneous details we cannot.</p>
 <p>It is the reason that the equations are a Millennium Prize Problem.</p>
 </section>
-<section id="reynoldss-pipe" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="reynoldss-pipe"><span class="header-section-number">8.2</span> Reynolds’s Pipe</h2>
+<section id="reynoldss-pipe" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="reynoldss-pipe"><span class="header-section-number">7.2</span> Reynolds’s Pipe</h2>
 <p>Osborne Reynolds was a professor of engineering at Owens College in Manchester, and in 1883 he published one of the most elegant experiments in the history of fluid mechanics. His apparatus was simple: a glass-walled pipe carrying water, with a fine tube at the inlet through which he introduced a thread of dye. At low flow speeds, the dye moved as a straight line through the pipe — laminar flow, the layers staying separate. As he increased the speed, the dye line began to waver. Above a critical speed, it broke apart and dispersed throughout the cross-section within a few pipe diameters of the inlet. Turbulence.</p>
-<p>Reynolds’s experiment made three things clear. First, the transition was sharp: there was a critical velocity above which smooth flow became impossible. Second, the critical velocity depended on the pipe diameter, the fluid’s viscosity, and the fluid’s density in exactly the combination that his analysis predicted — the ratio we now call the Reynolds number, <a href="05-physics.html#eq-reynolds" class="quarto-xref">Equation&nbsp;<span>7.4</span></a>. Third, the transition was not about the fluid; it was about the flow. Water could be made to flow smoothly or turbulently depending only on the geometry and speed, not on any property unique to water.</p>
+<p>Reynolds’s experiment made three things clear. First, the transition was sharp: there was a critical velocity above which smooth flow became impossible. Second, the critical velocity depended on the pipe diameter, the fluid’s viscosity, and the fluid’s density in exactly the combination that his analysis predicted — the ratio we now call the Reynolds number, <a href="05-physics.html#eq-reynolds" class="quarto-xref">Equation&nbsp;<span>6.4</span></a>. Third, the transition was not about the fluid; it was about the flow. Water could be made to flow smoothly or turbulently depending only on the geometry and speed, not on any property unique to water.</p>
 <p>What Reynolds could not do was explain <em>why</em> the smooth solution became unstable. That required a theory of turbulence, and such a theory did not arrive until 1941.</p>
 </section>
-<section id="kolmogorovs-cascade" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="kolmogorovs-cascade"><span class="header-section-number">8.3</span> Kolmogorov’s Cascade</h2>
+<section id="kolmogorovs-cascade" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="kolmogorovs-cascade"><span class="header-section-number">7.3</span> Kolmogorov’s Cascade</h2>
 <p>Andrei Nikolaevich Kolmogorov was a Soviet mathematician who in 1941 published three papers on the statistical structure of turbulence. The papers were brief, densely argued, and, given their content, remarkably unassuming. They contained what is now called the Kolmogorov theory of turbulence, and they are among the most cited papers in the physical sciences.</p>
 <p>Kolmogorov’s central idea was this: in fully developed turbulence, energy enters the flow at large scales (through the boundary conditions, the driving force, the geometry) and is transferred to progressively smaller scales through the interaction of eddies, until it reaches scales small enough that viscosity can convert kinetic energy into heat. This is the <em>energy cascade</em>.</p>
 <p>He made a further argument: at scales well separated from both the large energy-input scale and the small dissipation scale, the statistics of the turbulence should depend only on the rate of energy transfer through the cascade and the viscosity. This is the <em>inertial subrange</em>. In this range, the energy spectrum — the distribution of kinetic energy as a function of wavenumber <span class="math inline">\(k\)</span> (inverse scale) — takes the form:</p>
-<p><span id="eq-kolmogorov"><span class="math display">\[E(k) \sim \varepsilon^{2/3} k^{-5/3} \tag{8.1}\]</span></span></p>
+<p><span id="eq-kolmogorov"><span class="math display">\[E(k) \sim \varepsilon^{2/3} k^{-5/3} \tag{7.1}\]</span></span></p>
 <p>where <span class="math inline">\(\varepsilon\)</span> is the energy dissipation rate per unit mass. This <span class="math inline">\(k^{-5/3}\)</span> scaling — the Kolmogorov spectrum — has been confirmed in measurements ranging from wind tunnels to the ocean to the atmosphere to the solar wind. It is one of the best-confirmed scaling laws in physics.</p>
-<div id="568f3dff" class="cell" data-execution_count="1">
+<div id="abd5325f" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -431,19 +426,19 @@ window.Quarto = {
 <p>The Kolmogorov spectrum has a remarkable implication for computation. To simulate turbulence directly — to resolve all scales from the energy-input scale down to the dissipation scale — the number of grid points required scales roughly as <span class="math inline">\(Re^{9/4}\)</span>. A pipe flow at <span class="math inline">\(Re = 10^6\)</span> (a gentle water main) requires on the order of <span class="math inline">\(10^{13}\)</span> grid points. A jet engine operates at <span class="math inline">\(Re \approx 10^7\)</span>, which would require <span class="math inline">\(10^{16}\)</span> grid points. These numbers are not currently achievable. They will not be achievable on any computing hardware that exists or is projected to exist for the foreseeable future.</p>
 <p>This is not a temporary engineering limitation waiting for Moore’s Law. It is a property of the physics.</p>
 </section>
-<section id="what-cfd-actually-does" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="what-cfd-actually-does"><span class="header-section-number">8.4</span> What CFD Actually Does</h2>
+<section id="what-cfd-actually-does" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="what-cfd-actually-does"><span class="header-section-number">7.4</span> What CFD Actually Does</h2>
 <p>Computational fluid dynamics — the numerical solution of the Navier-Stokes equations on a computer — does not solve this problem. It works around it.</p>
 <p>The standard approach is called Reynolds-Averaged Navier-Stokes (RANS). The velocity field is decomposed into a mean component and a fluctuating component: <span class="math inline">\(\mathbf{u} = \bar{\mathbf{u}} + \mathbf{u}'\)</span>. The equations are averaged over time. The mean-flow equations look almost identical to the original Navier-Stokes equations, except that they contain an additional term representing the effect of the turbulent fluctuations on the mean flow: the <em>Reynolds stress tensor</em>, <span class="math inline">\(-\rho \overline{\mathbf{u}' \mathbf{u}'}\)</span>.</p>
 <p>This term is not closed. To use RANS, you must model the Reynolds stress tensor as a function of the mean flow — a relationship that the Navier-Stokes equations themselves do not provide. This modeling assumption is called the turbulence model. Every commercial CFD solver uses one: <span class="math inline">\(k\)</span>-<span class="math inline">\(\varepsilon\)</span>, <span class="math inline">\(k\)</span>-<span class="math inline">\(\omega\)</span>, the Spalart-Allmaras model, and many others. Each is a calibrated approximation. Each is wrong in some flow regimes.</p>
 <p>This is the state of engineering fluid mechanics: we use the Navier-Stokes equations every day, in every aircraft, every turbine, every combustion chamber, with models we know are approximate and trust because they have been validated against experiment. The equations are correct; the solutions are compromises.</p>
 </section>
-<section id="summary" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.5</span> Summary</h2>
+<section id="summary" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.5</span> Summary</h2>
 <p>Turbulence is the high-Reynolds-number regime of the Navier-Stokes equations, characterized by chaotic multi-scale motion. Reynolds’s 1883 pipe experiment demonstrated the transition quantitatively. Kolmogorov’s 1941 theory described the statistical structure of turbulence through the energy cascade, predicting the <span class="math inline">\(k^{-5/3}\)</span> spectrum that has been confirmed across many orders of magnitude in scale. Direct numerical simulation of turbulence requires grid counts that scale as <span class="math inline">\(Re^{9/4}\)</span>, making full-resolution simulation impossible at engineering Reynolds numbers. CFD uses turbulence models — calibrated approximations bolted onto averaged equations — to make the problem tractable. These models work. We do not fully understand why.</p>
 </section>
-<section id="further-reading" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">8.6</span> Further Reading</h2>
+<section id="further-reading" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">7.6</span> Further Reading</h2>
 <ul>
 <li>Richardson, L.F. <em>Weather Prediction by Numerical Process</em>. Cambridge, 1922. Contains the original “big whirls have little whirls” verse that presaged the cascade idea.</li>
 <li>Kolmogorov, A.N. “The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers.” <em>Doklady Akademii Nauk SSSR</em>, 30 (1941): 301–305. Three pages. Extremely important.</li>
@@ -454,7 +449,6 @@ window.Quarto = {
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -926,157 +920,155 @@ window.Quarto = {
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">number-sections:</span><span class="co"> true</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Monster Inside the Equations</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand what turbulence is physically and why it is hard</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Follow Reynolds's 1883 pipe experiment</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand Kolmogorov's 1941 energy cascade theory</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand why CFD is an approximation and what the approximations are</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand what turbulence is physically and why it is hard</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Follow Reynolds's 1883 pipe experiment</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand Kolmogorov's 1941 energy cascade theory</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand why CFD is an approximation and what the approximations are</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## What Turbulence Looks Like</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## What Turbulence Looks Like</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>Light a match and hold it still. For the first inch or two, the hot air above the flame rises smoothly, in orderly layers, the plume a well-behaved column. Then, somewhere above that, it breaks apart. The smooth column dissolves into eddies, and the eddies dissolve into smaller eddies, and the whole structure flickers and writhes with no apparent pattern. You have watched the transition from laminar to turbulent flow.</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>Light a match and hold it still. For the first inch or two, the hot air above the flame rises smoothly, in orderly layers, the plume a well-behaved column. Then, somewhere above that, it breaks apart. The smooth column dissolves into eddies, and the eddies dissolve into smaller eddies, and the whole structure flickers and writhes with no apparent pattern. You have watched the transition from laminar to turbulent flow.</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>This transition is not a defect of the flame or a failure of the air. It is the Navier-Stokes equations doing exactly what they do at high Reynolds number. The smooth solution becomes unstable. Small perturbations --- a vibration, a slight asymmetry, the motion of your breath --- grow rather than decay. The flow reorganizes into a state that is not disordered in any absolute sense but that is sensitive to initial conditions in ways that make detailed prediction effectively impossible.</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>This transition is not a defect of the flame or a failure of the air. It is the Navier-Stokes equations doing exactly what they do at high Reynolds number. The smooth solution becomes unstable. Small perturbations --- a vibration, a slight asymmetry, the motion of your breath --- grow rather than decay. The flow reorganizes into a state that is not disordered in any absolute sense but that is sensitive to initial conditions in ways that make detailed prediction effectively impossible.</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>Turbulence is not chaos in the technical mathematical sense, though it shares some properties with chaotic systems. It is a regime of the Navier-Stokes equations that we can simulate but not solve analytically, that we can model but not derive, and whose statistical properties we can partially predict but whose instantaneous details we cannot.</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>Turbulence is not chaos in the technical mathematical sense, though it shares some properties with chaotic systems. It is a regime of the Navier-Stokes equations that we can simulate but not solve analytically, that we can model but not derive, and whose statistical properties we can partially predict but whose instantaneous details we cannot.</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>It is the reason that the equations are a Millennium Prize Problem.</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>It is the reason that the equations are a Millennium Prize Problem.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reynolds's Pipe</span></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reynolds's Pipe</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Osborne Reynolds was a professor of engineering at Owens College in Manchester, and in 1883 he published one of the most elegant experiments in the history of fluid mechanics. His apparatus was simple: a glass-walled pipe carrying water, with a fine tube at the inlet through which he introduced a thread of dye. At low flow speeds, the dye moved as a straight line through the pipe --- laminar flow, the layers staying separate. As he increased the speed, the dye line began to waver. Above a critical speed, it broke apart and dispersed throughout the cross-section within a few pipe diameters of the inlet. Turbulence.</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>Osborne Reynolds was a professor of engineering at Owens College in Manchester, and in 1883 he published one of the most elegant experiments in the history of fluid mechanics. His apparatus was simple: a glass-walled pipe carrying water, with a fine tube at the inlet through which he introduced a thread of dye. At low flow speeds, the dye moved as a straight line through the pipe --- laminar flow, the layers staying separate. As he increased the speed, the dye line began to waver. Above a critical speed, it broke apart and dispersed throughout the cross-section within a few pipe diameters of the inlet. Turbulence.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>Reynolds's experiment made three things clear. First, the transition was sharp: there was a critical velocity above which smooth flow became impossible. Second, the critical velocity depended on the pipe diameter, the fluid's viscosity, and the fluid's density in exactly the combination that his analysis predicted --- the ratio we now call the Reynolds number, @eq-reynolds. Third, the transition was not about the fluid; it was about the flow. Water could be made to flow smoothly or turbulently depending only on the geometry and speed, not on any property unique to water.</span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>Reynolds's experiment made three things clear. First, the transition was sharp: there was a critical velocity above which smooth flow became impossible. Second, the critical velocity depended on the pipe diameter, the fluid's viscosity, and the fluid's density in exactly the combination that his analysis predicted --- the ratio we now call the Reynolds number, @eq-reynolds. Third, the transition was not about the fluid; it was about the flow. Water could be made to flow smoothly or turbulently depending only on the geometry and speed, not on any property unique to water.</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>What Reynolds could not do was explain *why* the smooth solution became unstable. That required a theory of turbulence, and such a theory did not arrive until 1941.</span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>What Reynolds could not do was explain *why* the smooth solution became unstable. That required a theory of turbulence, and such a theory did not arrive until 1941.</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Kolmogorov's Cascade</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Kolmogorov's Cascade</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>Andrei Nikolaevich Kolmogorov was a Soviet mathematician who in 1941 published three papers on the statistical structure of turbulence. The papers were brief, densely argued, and, given their content, remarkably unassuming. They contained what is now called the Kolmogorov theory of turbulence, and they are among the most cited papers in the physical sciences.</span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>Andrei Nikolaevich Kolmogorov was a Soviet mathematician who in 1941 published three papers on the statistical structure of turbulence. The papers were brief, densely argued, and, given their content, remarkably unassuming. They contained what is now called the Kolmogorov theory of turbulence, and they are among the most cited papers in the physical sciences.</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>Kolmogorov's central idea was this: in fully developed turbulence, energy enters the flow at large scales (through the boundary conditions, the driving force, the geometry) and is transferred to progressively smaller scales through the interaction of eddies, until it reaches scales small enough that viscosity can convert kinetic energy into heat. This is the *energy cascade*.</span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>Kolmogorov's central idea was this: in fully developed turbulence, energy enters the flow at large scales (through the boundary conditions, the driving force, the geometry) and is transferred to progressively smaller scales through the interaction of eddies, until it reaches scales small enough that viscosity can convert kinetic energy into heat. This is the *energy cascade*.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>He made a further argument: at scales well separated from both the large energy-input scale and the small dissipation scale, the statistics of the turbulence should depend only on the rate of energy transfer through the cascade and the viscosity. This is the *inertial subrange*. In this range, the energy spectrum --- the distribution of kinetic energy as a function of wavenumber $k$ (inverse scale) --- takes the form:</span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>He made a further argument: at scales well separated from both the large energy-input scale and the small dissipation scale, the statistics of the turbulence should depend only on the rate of energy transfer through the cascade and the viscosity. This is the *inertial subrange*. In this range, the energy spectrum --- the distribution of kinetic energy as a function of wavenumber $k$ (inverse scale) --- takes the form:</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>$$E(k) \sim \varepsilon^{2/3} k^{-5/3}$$ {#eq-kolmogorov}</span>
 <span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>$$E(k) \sim \varepsilon^{2/3} k^{-5/3}$$ {#eq-kolmogorov}</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>where $\varepsilon$ is the energy dissipation rate per unit mass. This $k^{-5/3}$ scaling --- the Kolmogorov spectrum --- has been confirmed in measurements ranging from wind tunnels to the ocean to the atmosphere to the solar wind. It is one of the best-confirmed scaling laws in physics.</span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>where $\varepsilon$ is the energy dissipation rate per unit mass. This $k^{-5/3}$ scaling --- the Kolmogorov spectrum --- has been confirmed in measurements ranging from wind tunnels to the ocean to the atmosphere to the solar wind. It is one of the best-confirmed scaling laws in physics.</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Left: Kolmogorov energy spectrum</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.logspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">400</span>)</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>k_start <span class="op">=</span> <span class="fl">1.0</span>    <span class="co"># energy injection scale</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>k_dissip <span class="op">=</span> <span class="fl">200.0</span> <span class="co"># dissipation scale</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Piecewise: flat injection range, -5/3 inertial subrange, steep dissipation</span></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> energy_spectrum(k, k_start<span class="op">=</span><span class="fl">1.0</span>, k_dissip<span class="op">=</span><span class="fl">200.0</span>):</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    E <span class="op">=</span> np.zeros_like(k)</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Injection range (large scales): roughly flat</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    low <span class="op">=</span> k <span class="op">&lt;</span> k_start</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Inertial subrange</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    mid <span class="op">=</span> (k <span class="op">&gt;=</span> k_start) <span class="op">&amp;</span> (k <span class="op">&lt;=</span> k_dissip)</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dissipation range</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    high <span class="op">=</span> k <span class="op">&gt;</span> k_dissip</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    E[low] <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    E[mid] <span class="op">=</span> (k[mid] <span class="op">/</span> k_start)<span class="op">**</span>(<span class="op">-</span><span class="dv">5</span><span class="op">/</span><span class="dv">3</span>)</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    E[high] <span class="op">=</span> (k_dissip <span class="op">/</span> k_start)<span class="op">**</span>(<span class="op">-</span><span class="dv">5</span><span class="op">/</span><span class="dv">3</span>) <span class="op">*</span> np.exp(<span class="op">-</span><span class="dv">4</span> <span class="op">*</span> (k[high] <span class="op">/</span> k_dissip <span class="op">-</span> <span class="dv">1</span>))</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> E</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Left: Kolmogorov energy spectrum</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.logspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">400</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>k_start <span class="op">=</span> <span class="fl">1.0</span>    <span class="co"># energy injection scale</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>k_dissip <span class="op">=</span> <span class="fl">200.0</span> <span class="co"># dissipation scale</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Piecewise: flat injection range, -5/3 inertial subrange, steep dissipation</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> energy_spectrum(k, k_start<span class="op">=</span><span class="fl">1.0</span>, k_dissip<span class="op">=</span><span class="fl">200.0</span>):</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    E <span class="op">=</span> np.zeros_like(k)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Injection range (large scales): roughly flat</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    low <span class="op">=</span> k <span class="op">&lt;</span> k_start</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Inertial subrange</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    mid <span class="op">=</span> (k <span class="op">&gt;=</span> k_start) <span class="op">&amp;</span> (k <span class="op">&lt;=</span> k_dissip)</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dissipation range</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    high <span class="op">=</span> k <span class="op">&gt;</span> k_dissip</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    E[low] <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    E[mid] <span class="op">=</span> (k[mid] <span class="op">/</span> k_start)<span class="op">**</span>(<span class="op">-</span><span class="dv">5</span><span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    E[high] <span class="op">=</span> (k_dissip <span class="op">/</span> k_start)<span class="op">**</span>(<span class="op">-</span><span class="dv">5</span><span class="op">/</span><span class="dv">3</span>) <span class="op">*</span> np.exp(<span class="op">-</span><span class="dv">4</span> <span class="op">*</span> (k[high] <span class="op">/</span> k_dissip <span class="op">-</span> <span class="dv">1</span>))</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> E</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> energy_spectrum(k)</span>
 <span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> energy_spectrum(k)</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> axes[<span class="dv">0</span>]</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>ax.loglog(k, E, color<span class="op">=</span><span class="st">'#4f8ef7'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'Turbulent kinetic energy'</span>)</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Mark -5/3 slope reference</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>k_ref <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">80</span>])</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>E_ref <span class="op">=</span> <span class="fl">0.9</span> <span class="op">*</span> (k_ref <span class="op">/</span> <span class="dv">3</span>)<span class="op">**</span>(<span class="op">-</span><span class="dv">5</span><span class="op">/</span><span class="dv">3</span>)</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>ax.loglog(k_ref, E_ref, <span class="st">'k--'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, label<span class="op">=</span><span class="st">'$k^{-5/3}$ slope'</span>)</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>ax.axvspan(k[<span class="dv">0</span>], k_start, alpha<span class="op">=</span><span class="fl">0.08</span>, color<span class="op">=</span><span class="st">'#e06c4a'</span>, label<span class="op">=</span><span class="st">'Energy injection'</span>)</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>ax.axvspan(k_start, k_dissip, alpha<span class="op">=</span><span class="fl">0.08</span>, color<span class="op">=</span><span class="st">'#4ec9a0'</span>, label<span class="op">=</span><span class="st">'Inertial subrange'</span>)</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>ax.axvspan(k_dissip, k[<span class="op">-</span><span class="dv">1</span>], alpha<span class="op">=</span><span class="fl">0.08</span>, color<span class="op">=</span><span class="st">'#a47ee8'</span>, label<span class="op">=</span><span class="st">'Viscous dissipation'</span>)</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Wavenumber $k$ (inverse scale)'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Energy $E(k)$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Kolmogorov Energy Spectrum</span><span class="ch">\n</span><span class="st">(1941)"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="fl">8.5</span>, framealpha<span class="op">=</span><span class="fl">0.9</span>)</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="co"># Right: scale of turbulent eddies — energy cascade schematic</span></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> axes[<span class="dv">1</span>]</span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>ax2.set_aspect(<span class="st">'equal'</span>)</span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>ax2.axis(<span class="st">'off'</span>)</span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>ax2.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"The Energy Cascade</span><span class="ch">\n</span><span class="st">(schematic)"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">7</span>)</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw circles of decreasing size to represent eddy cascade</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>sizes <span class="op">=</span> [(<span class="fl">4.5</span>, <span class="fl">2.0</span>, <span class="fl">2.0</span>), (<span class="fl">2.2</span>, <span class="fl">5.5</span>, <span class="fl">2.0</span>), (<span class="fl">2.2</span>, <span class="fl">7.0</span>, <span class="fl">3.8</span>),</span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>         (<span class="fl">1.1</span>, <span class="fl">1.5</span>, <span class="fl">5.5</span>), (<span class="fl">1.1</span>, <span class="fl">3.2</span>, <span class="fl">6.5</span>), (<span class="fl">1.1</span>, <span class="fl">4.8</span>, <span class="fl">5.5</span>),</span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>         (<span class="fl">0.55</span>, <span class="fl">2.0</span>, <span class="fl">8.2</span>), (<span class="fl">0.55</span>, <span class="fl">3.2</span>, <span class="fl">8.8</span>), (<span class="fl">0.55</span>, <span class="fl">4.5</span>, <span class="fl">8.2</span>), (<span class="fl">0.55</span>, <span class="fl">5.5</span>, <span class="fl">8.8</span>),</span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>         (<span class="fl">0.25</span>, <span class="fl">6.5</span>, <span class="fl">8.5</span>), (<span class="fl">0.25</span>, <span class="fl">7.0</span>, <span class="fl">7.8</span>), (<span class="fl">0.25</span>, <span class="fl">7.5</span>, <span class="fl">8.5</span>), (<span class="fl">0.25</span>, <span class="fl">8.0</span>, <span class="fl">7.8</span>)]</span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>colors_cascade <span class="op">=</span> [<span class="st">'#e06c4a'</span>, <span class="st">'#a47ee8'</span>, <span class="st">'#4f8ef7'</span>, <span class="st">'#4ec9a0'</span>]</span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (r, cx, cy) <span class="kw">in</span> <span class="bu">enumerate</span>(sizes):</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> colors_cascade[<span class="bu">min</span>(i <span class="op">//</span> <span class="dv">2</span>, <span class="dv">3</span>)]</span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> plt.Circle((cx, cy), r, fill<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>c,</span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>                         linewidth<span class="op">=</span><span class="bu">max</span>(<span class="fl">0.5</span>, <span class="fl">2.5</span> <span class="op">-</span> i <span class="op">*</span> <span class="fl">0.2</span>), alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>    ax2.add_patch(circle)</span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Large eddies</span><span class="ch">\n</span><span class="st">(energy input)'</span>, xy<span class="op">=</span>(<span class="fl">2.0</span>, <span class="fl">2.0</span>), fontsize<span class="op">=</span><span class="fl">8.5</span>,</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#e06c4a'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Medium eddies'</span>, xy<span class="op">=</span>(<span class="fl">5.2</span>, <span class="fl">3.0</span>), fontsize<span class="op">=</span><span class="dv">8</span>,</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#a47ee8'</span>)</span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Small eddies</span><span class="ch">\n</span><span class="st">(dissipation)'</span>, xy<span class="op">=</span>(<span class="fl">7.5</span>, <span class="fl">6.5</span>), fontsize<span class="op">=</span><span class="dv">8</span>,</span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#4ec9a0'</span>)</span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="fl">8.5</span>, <span class="fl">1.5</span>), xytext<span class="op">=</span>(<span class="fl">2.5</span>, <span class="fl">1.0</span>),</span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>             arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, color<span class="op">=</span><span class="st">'#666'</span>, lw<span class="op">=</span><span class="fl">1.2</span>))</span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="fl">5.5</span>, <span class="fl">0.5</span>, <span class="st">'Energy transfer →'</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, ha<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#666'</span>)</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'docs/turbulence.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> axes[<span class="dv">0</span>]</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>ax.loglog(k, E, color<span class="op">=</span><span class="st">'#4f8ef7'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'Turbulent kinetic energy'</span>)</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Mark -5/3 slope reference</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>k_ref <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">80</span>])</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>E_ref <span class="op">=</span> <span class="fl">0.9</span> <span class="op">*</span> (k_ref <span class="op">/</span> <span class="dv">3</span>)<span class="op">**</span>(<span class="op">-</span><span class="dv">5</span><span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>ax.loglog(k_ref, E_ref, <span class="st">'k--'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, label<span class="op">=</span><span class="st">'$k^{-5/3}$ slope'</span>)</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>ax.axvspan(k[<span class="dv">0</span>], k_start, alpha<span class="op">=</span><span class="fl">0.08</span>, color<span class="op">=</span><span class="st">'#e06c4a'</span>, label<span class="op">=</span><span class="st">'Energy injection'</span>)</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>ax.axvspan(k_start, k_dissip, alpha<span class="op">=</span><span class="fl">0.08</span>, color<span class="op">=</span><span class="st">'#4ec9a0'</span>, label<span class="op">=</span><span class="st">'Inertial subrange'</span>)</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>ax.axvspan(k_dissip, k[<span class="op">-</span><span class="dv">1</span>], alpha<span class="op">=</span><span class="fl">0.08</span>, color<span class="op">=</span><span class="st">'#a47ee8'</span>, label<span class="op">=</span><span class="st">'Viscous dissipation'</span>)</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Wavenumber $k$ (inverse scale)'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Energy $E(k)$'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Kolmogorov Energy Spectrum</span><span class="ch">\n</span><span class="st">(1941)"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="fl">8.5</span>, framealpha<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="co"># Right: scale of turbulent eddies — energy cascade schematic</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> axes[<span class="dv">1</span>]</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>ax2.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>ax2.axis(<span class="st">'off'</span>)</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>ax2.set_facecolor(<span class="st">'#f8f9fc'</span>)</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"The Energy Cascade</span><span class="ch">\n</span><span class="st">(schematic)"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">7</span>)</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw circles of decreasing size to represent eddy cascade</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>sizes <span class="op">=</span> [(<span class="fl">4.5</span>, <span class="fl">2.0</span>, <span class="fl">2.0</span>), (<span class="fl">2.2</span>, <span class="fl">5.5</span>, <span class="fl">2.0</span>), (<span class="fl">2.2</span>, <span class="fl">7.0</span>, <span class="fl">3.8</span>),</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>         (<span class="fl">1.1</span>, <span class="fl">1.5</span>, <span class="fl">5.5</span>), (<span class="fl">1.1</span>, <span class="fl">3.2</span>, <span class="fl">6.5</span>), (<span class="fl">1.1</span>, <span class="fl">4.8</span>, <span class="fl">5.5</span>),</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>         (<span class="fl">0.55</span>, <span class="fl">2.0</span>, <span class="fl">8.2</span>), (<span class="fl">0.55</span>, <span class="fl">3.2</span>, <span class="fl">8.8</span>), (<span class="fl">0.55</span>, <span class="fl">4.5</span>, <span class="fl">8.2</span>), (<span class="fl">0.55</span>, <span class="fl">5.5</span>, <span class="fl">8.8</span>),</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>         (<span class="fl">0.25</span>, <span class="fl">6.5</span>, <span class="fl">8.5</span>), (<span class="fl">0.25</span>, <span class="fl">7.0</span>, <span class="fl">7.8</span>), (<span class="fl">0.25</span>, <span class="fl">7.5</span>, <span class="fl">8.5</span>), (<span class="fl">0.25</span>, <span class="fl">8.0</span>, <span class="fl">7.8</span>)]</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>colors_cascade <span class="op">=</span> [<span class="st">'#e06c4a'</span>, <span class="st">'#a47ee8'</span>, <span class="st">'#4f8ef7'</span>, <span class="st">'#4ec9a0'</span>]</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (r, cx, cy) <span class="kw">in</span> <span class="bu">enumerate</span>(sizes):</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> colors_cascade[<span class="bu">min</span>(i <span class="op">//</span> <span class="dv">2</span>, <span class="dv">3</span>)]</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> plt.Circle((cx, cy), r, fill<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>c,</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>                         linewidth<span class="op">=</span><span class="bu">max</span>(<span class="fl">0.5</span>, <span class="fl">2.5</span> <span class="op">-</span> i <span class="op">*</span> <span class="fl">0.2</span>), alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    ax2.add_patch(circle)</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Large eddies</span><span class="ch">\n</span><span class="st">(energy input)'</span>, xy<span class="op">=</span>(<span class="fl">2.0</span>, <span class="fl">2.0</span>), fontsize<span class="op">=</span><span class="fl">8.5</span>,</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#e06c4a'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Medium eddies'</span>, xy<span class="op">=</span>(<span class="fl">5.2</span>, <span class="fl">3.0</span>), fontsize<span class="op">=</span><span class="dv">8</span>,</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#a47ee8'</span>)</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Small eddies</span><span class="ch">\n</span><span class="st">(dissipation)'</span>, xy<span class="op">=</span>(<span class="fl">7.5</span>, <span class="fl">6.5</span>), fontsize<span class="op">=</span><span class="dv">8</span>,</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#4ec9a0'</span>)</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="fl">8.5</span>, <span class="fl">1.5</span>), xytext<span class="op">=</span>(<span class="fl">2.5</span>, <span class="fl">1.0</span>),</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>             arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, color<span class="op">=</span><span class="st">'#666'</span>, lw<span class="op">=</span><span class="fl">1.2</span>))</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="fl">5.5</span>, <span class="fl">0.5</span>, <span class="st">'Energy transfer →'</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, ha<span class="op">=</span><span class="st">'center'</span>, color<span class="op">=</span><span class="st">'#666'</span>)</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'docs/turbulence.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>The Kolmogorov spectrum has a remarkable implication for computation. To simulate turbulence directly --- to resolve all scales from the energy-input scale down to the dissipation scale --- the number of grid points required scales roughly as $Re^{9/4}$. A pipe flow at $Re = 10^6$ (a gentle water main) requires on the order of $10^{13}$ grid points. A jet engine operates at $Re \approx 10^7$, which would require $10^{16}$ grid points. These numbers are not currently achievable. They will not be achievable on any computing hardware that exists or is projected to exist for the foreseeable future.</span>
 <span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>The Kolmogorov spectrum has a remarkable implication for computation. To simulate turbulence directly --- to resolve all scales from the energy-input scale down to the dissipation scale --- the number of grid points required scales roughly as $Re^{9/4}$. A pipe flow at $Re = 10^6$ (a gentle water main) requires on the order of $10^{13}$ grid points. A jet engine operates at $Re \approx 10^7$, which would require $10^{16}$ grid points. These numbers are not currently achievable. They will not be achievable on any computing hardware that exists or is projected to exist for the foreseeable future.</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>This is not a temporary engineering limitation waiting for Moore's Law. It is a property of the physics.</span>
 <span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>This is not a temporary engineering limitation waiting for Moore's Law. It is a property of the physics.</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="fu">## What CFD Actually Does</span></span>
 <span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## What CFD Actually Does</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>Computational fluid dynamics --- the numerical solution of the Navier-Stokes equations on a computer --- does not solve this problem. It works around it.</span>
 <span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>Computational fluid dynamics --- the numerical solution of the Navier-Stokes equations on a computer --- does not solve this problem. It works around it.</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>The standard approach is called Reynolds-Averaged Navier-Stokes (RANS). The velocity field is decomposed into a mean component and a fluctuating component: $\mathbf{u} = \bar{\mathbf{u}} + \mathbf{u}'$. The equations are averaged over time. The mean-flow equations look almost identical to the original Navier-Stokes equations, except that they contain an additional term representing the effect of the turbulent fluctuations on the mean flow: the *Reynolds stress tensor*, $-\rho \overline{\mathbf{u}' \mathbf{u}'}$.</span>
 <span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>The standard approach is called Reynolds-Averaged Navier-Stokes (RANS). The velocity field is decomposed into a mean component and a fluctuating component: $\mathbf{u} = \bar{\mathbf{u}} + \mathbf{u}'$. The equations are averaged over time. The mean-flow equations look almost identical to the original Navier-Stokes equations, except that they contain an additional term representing the effect of the turbulent fluctuations on the mean flow: the *Reynolds stress tensor*, $-\rho \overline{\mathbf{u}' \mathbf{u}'}$.</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>This term is not closed. To use RANS, you must model the Reynolds stress tensor as a function of the mean flow --- a relationship that the Navier-Stokes equations themselves do not provide. This modeling assumption is called the turbulence model. Every commercial CFD solver uses one: $k$-$\varepsilon$, $k$-$\omega$, the Spalart-Allmaras model, and many others. Each is a calibrated approximation. Each is wrong in some flow regimes.</span>
 <span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>This term is not closed. To use RANS, you must model the Reynolds stress tensor as a function of the mean flow --- a relationship that the Navier-Stokes equations themselves do not provide. This modeling assumption is called the turbulence model. Every commercial CFD solver uses one: $k$-$\varepsilon$, $k$-$\omega$, the Spalart-Allmaras model, and many others. Each is a calibrated approximation. Each is wrong in some flow regimes.</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>This is the state of engineering fluid mechanics: we use the Navier-Stokes equations every day, in every aircraft, every turbine, every combustion chamber, with models we know are approximate and trust because they have been validated against experiment. The equations are correct; the solutions are compromises.</span>
 <span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>This is the state of engineering fluid mechanics: we use the Navier-Stokes equations every day, in every aircraft, every turbine, every combustion chamber, with models we know are approximate and trust because they have been validated against experiment. The equations are correct; the solutions are compromises.</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
 <span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>Turbulence is the high-Reynolds-number regime of the Navier-Stokes equations, characterized by chaotic multi-scale motion. Reynolds's 1883 pipe experiment demonstrated the transition quantitatively. Kolmogorov's 1941 theory described the statistical structure of turbulence through the energy cascade, predicting the $k^{-5/3}$ spectrum that has been confirmed across many orders of magnitude in scale. Direct numerical simulation of turbulence requires grid counts that scale as $Re^{9/4}$, making full-resolution simulation impossible at engineering Reynolds numbers. CFD uses turbulence models --- calibrated approximations bolted onto averaged equations --- to make the problem tractable. These models work. We do not fully understand why.</span>
 <span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>Turbulence is the high-Reynolds-number regime of the Navier-Stokes equations, characterized by chaotic multi-scale motion. Reynolds's 1883 pipe experiment demonstrated the transition quantitatively. Kolmogorov's 1941 theory described the statistical structure of turbulence through the energy cascade, predicting the $k^{-5/3}$ spectrum that has been confirmed across many orders of magnitude in scale. Direct numerical simulation of turbulence requires grid counts that scale as $Re^{9/4}$, making full-resolution simulation impossible at engineering Reynolds numbers. CFD uses turbulence models --- calibrated approximations bolted onto averaged equations --- to make the problem tractable. These models work. We do not fully understand why.</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further Reading</span></span>
 <span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further Reading</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Richardson, L.F. *Weather Prediction by Numerical Process*. Cambridge, 1922. Contains the original "big whirls have little whirls" verse that presaged the cascade idea.</span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kolmogorov, A.N. "The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers." *Doklady Akademii Nauk SSSR*, 30 (1941): 301–305. Three pages. Extremely important.</span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pope, S.B. *Turbulent Flows*. Cambridge University Press, 2000. The standard graduate text on turbulence modeling.</span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tennekes, H. &amp; Lumley, J.L. *A First Course in Turbulence*. MIT Press, 1972. Accessible treatment of the cascade and the Kolmogorov scales.</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Richardson, L.F. *Weather Prediction by Numerical Process*. Cambridge, 1922. Contains the original "big whirls have little whirls" verse that presaged the cascade idea.</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kolmogorov, A.N. "The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers." *Doklady Akademii Nauk SSSR*, 30 (1941): 301–305. Three pages. Extremely important.</span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pope, S.B. *Turbulent Flows*. Cambridge University Press, 2000. The standard graduate text on turbulence modeling.</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tennekes, H. &amp; Lumley, J.L. *A First Course in Turbulence*. MIT Press, 1972. Accessible treatment of the cascade and the Kolmogorov scales.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

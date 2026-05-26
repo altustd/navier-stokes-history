@@ -3,8 +3,6 @@ title: "Code Reference"
 number-sections: true
 ---
 
-# Code Reference {.unnumbered}
-
 All executable code from the book, collected here for reference. Functions are defined with `eval: false` so they do not re-execute on render.
 
 ## Hagen-Poiseuille Profile {.unnumbered}
